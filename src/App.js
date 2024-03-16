@@ -32,18 +32,18 @@ function App() {
 
               <Route path="/blog" element={<BlogPage />} />
 
-              <Route path="/village" element={<VillagePage />} />
+  <Route path="/village" element={<VillagePage />} />
 
-              <Route path="/app" element={<AppsPage />} />
+  <Route path="/app" element={<AppsPage />} />
 
-              <Route path="/history" element={<HistoryPage />} />
-              <Route path="/photoalbum" element={<AlbumPage />} />
+  <Route path="/history" element={<HistoryPage />} />
+  <Route path="/photoalbum" element={<AlbumPage />} />
 
-              <Route path="*" element={<Main />} />
-            </Routes>
-          </AnimatePresence>
-        </Suspense>
-      </ThemeProvider>
+  <Route path="*" element={<Main />} />
+            </Routes >
+          </AnimatePresence >
+        </Suspense >
+      </ThemeProvider >
     </>
   );
 }
