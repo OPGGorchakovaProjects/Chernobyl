@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_portfolio_starter_code_files=self.webpackChunkreact_portfolio_starter_code_files||[]).push([[610],{7610:function(e,r,t){t.r(r);t(2791);var o=t(184);r.default=function(){return(0,o.jsx)("div",{children:"BlogPage"})}}}]);
+//# sourceMappingURL=610.bffe7d14.chunk.js.map

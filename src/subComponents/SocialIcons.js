@@ -106,7 +106,7 @@ const SocialIcons = (props) => {
           height: 0,
         }}
         animate={{
-          height: '8rem',
+          height: '5rem',
         }}
         transition={{
           type: 'spring',

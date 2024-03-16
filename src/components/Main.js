@@ -89,14 +89,19 @@ const Center = styled.button`
   }
 `;
 
-const Contact = styled.a`
+const Docs = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  text-decoration: none;
+  @media only screen and (max-width: 50em) {
+    text-shadow: ${(props) => (props.click ? '0 0 4px #000' : 'none')};
+  }
 `;
+
 const BLOG = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
@@ -219,12 +224,12 @@ const Main = () => {
               />
             )}
 
-            <span>начать путешествие</span>
+            <span>НАЧАТЬ ПУТЕШЕСТВИЕ</span>
           </Center>
 
           {mq ? (
-            <Contact click={+click} target="_blank" href="mailto:!!">
-              <motion.h3
+            <Docs click={+click} onClick={() => setpath('Documents')} to="/Documents">
+              <motion.h2
                 initial={{
                   y: -200,
                   transition: { type: 'spring', duration: 1.5, delay: 1 },
@@ -236,12 +241,12 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                связь с разработчиком
-              </motion.h3>
-            </Contact>
+                Документы
+              </motion.h2>
+            </Docs>
           ) : (
-            <Contact click={+false} target="_blank" href="mailto:!!">
-              <motion.h3
+            <Docs click={+false} onClick={() => setpath('Documents')} to="/Documents">
+              <motion.h2
                 initial={{
                   y: -200,
                   transition: { type: 'spring', duration: 1.5, delay: 1 },
@@ -253,9 +258,9 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                связь с разработчиком
-              </motion.h3>
-            </Contact>
+                Документы
+              </motion.h2>
+            </Docs>
           )}
 
           {mq ? (
@@ -272,7 +277,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                люди
+                Люди
               </motion.h2>
             </BLOG>
           ) : (
@@ -289,7 +294,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                люди
+                Люди
               </motion.h2>
             </BLOG>
           )}
@@ -308,7 +313,7 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              деревни
+              Деревни
             </motion.h2>
           </Village>
 
