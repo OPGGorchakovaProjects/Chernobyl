@@ -225,19 +225,13 @@ const Intro = () => {
         </Text>
       </SubBox>
       <SubBox>
-        <NavLink
-          onClick={() => setClick(false)}
-          click={mq ? +false : +click}
-          to="/photoalbum"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2 }}
-          >
-            <img className="pic" src={gasMask} alt="Choto" />
-          </motion.div>
-        </NavLink>
+          <img className="pic" src={gasMask} alt="Choto" />
+        </motion.div>
       </SubBox>
     </Box>
   );

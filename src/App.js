@@ -6,13 +6,13 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './components/Themes';
 import Loading from './subComponents/Loading';
 
-//Components ХУЙ
 const Main = lazy(() => import('./components/Main'));
 const HronologPage = lazy(() => import('./components/HronologPage'));
 const AppsPage = lazy(() => import('./components/AppsPage'));
 const BlogPage = lazy(() => import('./components/BlogPage'));
 const VillagePage = lazy(() => import('./components/VillagePage'));
 const HistoryPage = lazy(() => import('./components/HistoryPage'));
+const Documents = lazy(() => import('./components/Documents'));
 const AlbumPage = lazy(() => import('./albumComponents/albumPage'));
 
 function App() {
@@ -32,18 +32,19 @@ function App() {
 
               <Route path="/blog" element={<BlogPage />} />
 
-  <Route path="/village" element={<VillagePage />} />
+              <Route path="/village" element={<VillagePage />} />
 
-  <Route path="/app" element={<AppsPage />} />
+              <Route path="/app" element={<AppsPage />} />
 
-  <Route path="/history" element={<HistoryPage />} />
-  <Route path="/photoalbum" element={<AlbumPage />} />
+              <Route path="/history" element={<HistoryPage />} />
 
-  <Route path="*" element={<Main />} />
-            </Routes >
-          </AnimatePresence >
-        </Suspense >
-      </ThemeProvider >
+              <Route path="/documents" element={<Documents />} />
+
+              <Route path="*" element={<Main />} />
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
+      </ThemeProvider>
     </>
   );
 }
