@@ -242,5 +242,5 @@ const Intro = () => {
     </Box>
   );
 };
-
+// izmenil
 export default Intro;
