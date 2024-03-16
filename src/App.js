@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './components/Themes';
 import Loading from './subComponents/Loading';
 
-//Components
+//Components ХУЙ
 const Main = lazy(() => import('./components/Main'));
 const HronologPage = lazy(() => import('./components/HronologPage'));
 const AppsPage = lazy(() => import('./components/AppsPage'));
