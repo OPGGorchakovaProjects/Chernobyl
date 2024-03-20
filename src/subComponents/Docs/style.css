@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  scrollbar-color: #242424;
+
 }
 
 html,
@@ -18,18 +20,6 @@ h2 {
   color: #f3f3f3;
 }
 
-@media (min-width: 768px) {
-  h2 {
-    font-size: 4em;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 2.5em;
-  }
-}
-
 main {
   height: 100%;
   width: 75vw;
@@ -40,13 +30,15 @@ main {
   align-items: center;
   margin: 0 auto;
   margin-bottom: 10%;
+
 }
 
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5%;
+  grid-column-gap: 3%;
+  grid-row-gap: 0.5%;
   justify-items: center;
   align-items: center;
   margin-top: 20px;
@@ -54,6 +46,14 @@ main {
 
 .image-container {
   position: relative;
+}
+
+.image-container-first {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -65,8 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  min-width: 300px;
-  max-width: 600px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -98,6 +97,18 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 768px) {
+  h2 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2.5em;
+  }
+}
+
 @media (max-width: 900px) {
   main {
     width: 80%;
@@ -106,7 +117,8 @@ img {
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-gap: 10%;
+    grid-column-gap: 3%;
+    grid-row-gap: 0.5%;
   }
 }
 
@@ -118,7 +130,7 @@ img {
   .photo-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-row-gap: 0.2%;
   }
 }
 
@@ -132,6 +144,8 @@ img {
   transform: translate(-50%, -50%);
   width: 50%;
   height: 15%;
+  background-color: #242424;
+  color: #ffffff;
   border-color: transparent;
   border-radius: 20px;
   font-weight: bold;
@@ -141,13 +155,15 @@ img {
 }
 
 .modal-button:hover {
-  background-color: #555555;
+  background-color: #333333;
 }
 
 .modal-button:active {
-  background-color: #333333;
+  background-color: #ffffff;
   width: 44%;
   height: 14%;
+  color: #242424;
+
 }
 
 .button-slide {
@@ -171,10 +187,11 @@ img {
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   border: none;
-  align-self: center;
+  align-items: center;
   height: 90%;
+  width: auto;
 }
 
 .close-button {
@@ -191,16 +208,13 @@ img {
   color: white;
 }
 
-.modalInside {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 90%;
+.modalInside img {
+  max-width: 90%;
+  max-height: 95%;
+  object-fit: contain;
 }
 
-.modalInside img {
-  max-width: 80%;
-  max-height: 90%;
-  object-fit: contain;
+.image-modal-container {
+  width: auto;
+  margin: 0 2% 0 2%
 }

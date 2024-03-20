@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 import { lazy } from 'react';
-import imagesData from '../subComponents/Docs/images'; // Поменяйте это на свой путь к данным изображений
+import imagesData from '../subComponents/Docs/images';
 import '../subComponents/Docs/style.css';
-
-import Slider from 'react-slick';
 
 const PowerButton = lazy(() => import('../subComponents/PowerButton'));
 
@@ -16,6 +14,22 @@ const Documents = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [selectedAdditionalImageIndex, setSelectedAdditionalImageIndex] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+            setIsTablet(window.innerWidth <= 900);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const handleOpenModal = (image) => {
         setSelectedImage(image);
@@ -45,15 +59,17 @@ const Documents = () => {
             <div className="photo-grid">
                 {imagesData.map((image, index) => (
                     <div className="container" key={index}>
-                        <div>
+                        <div className='text-container'>
                             <h1>{image.title}</h1>
                             <p>{image.description}</p>
                         </div>
-                        <div className="image-container">
-                            <img src={image.source} alt="error" />
-                            <Button onClick={() => handleOpenModal(image)} className="modal-button">
-                                Открыть
-                            </Button>
+                        <div className="image-container-first">
+                            <div className="image-container">
+                                <img src={image.source} alt="error" />
+                                <Button onClick={() => handleOpenModal(image)} className="modal-button">
+                                    Открыть
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 ))}
@@ -67,27 +83,31 @@ const Documents = () => {
                             backgroundColor: 'rgba(0, 0, 0, 0.3)'
                         },
                         content: {
-                            width: '60%',
-                            height: '80%',
+                            width: isMobile ? '90%' : isTablet ? '60%' : '40%',
+                            height: '90%',
                             margin: 'auto',
                             backgroundColor: '#333333',
                             borderRadius: '12px',
-                            borderColor: 'transparent'
+                            borderColor: 'transparent',
+                            justifySelf: 'center',
                         }
                     }}
                     contentLabel="Модальное окно"
                 >
                     <button onClick={handleCloseModal} className='close-button'>Закрыть</button>
                     <div className='modalInside'>
-                        <button onClick={slideLeft} className='button-slide'>{leftarrow}</button>
+                        {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
+                            <button onClick={slideLeft} className='button-slide'>{leftarrow}</button>
+                        )}
                         {selectedImage.additionalImages && selectedImage.additionalImages.length > 0 && (
                             <img src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" className='image-modal-container' />
                         )}
-                        <button onClick={slideRight} className='button-slide'>{rightarrow}</button>
+                        {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
+                            <button onClick={slideRight} className='button-slide'>{rightarrow}</button>
+                        )}
                     </div>
                 </Modal>
             )}
-
         </main>
     );
 };
