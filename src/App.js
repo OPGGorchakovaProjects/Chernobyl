@@ -40,6 +40,8 @@ function App() {
 
               <Route path="/documents" element={<Documents />} />
 
+              <Route path="/photoalbum" element={<AlbumPage />} />
+
               <Route path="*" element={<Main />} />
             </Routes>
           </AnimatePresence>

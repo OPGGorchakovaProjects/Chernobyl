@@ -13,10 +13,12 @@ import './style.css';
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules';
+import PowerButton from '../subComponents/PowerButton';
 
 export default function AlbumPage() {
   return (
     <div id="main">
+      <PowerButton />
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
