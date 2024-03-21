@@ -53,20 +53,20 @@ const Documents = () => {
     };
 
     return (
-        <div id="body">
-            <main id="main">
-                <h2 id="h2">Секреты Припяти: <br /> Чернобыльские документы</h2>
+        <div className="body">
+            <main className="main">
+                <h2 className="h2">Секреты Припяти: <br /> Чернобыльские документы</h2>
                 <PowerButton />
                 <div className="photo-grid">
                     {imagesData.map((image, index) => (
                         <div className="container" key={index}>
                             <div className='text-container'>
-                                <h1 id="h1">{image.title}</h1>
-                                <p id="p">{image.description}</p>
+                                <h1 className="h1">{image.title}</h1>
+                                <p className="p">{image.description}</p>
                             </div>
                             <div className="image-container-first">
                                 <div className="image-container">
-                                    <img id="img" src={image.source} alt="error" />
+                                    <img className="img" src={image.source} alt="error" />
                                     <Button onClick={() => handleOpenModal(image)} className="modal-button">
                                         Открыть
                                     </Button>

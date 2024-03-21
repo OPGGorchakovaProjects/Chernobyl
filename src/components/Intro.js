@@ -62,6 +62,7 @@ const Box = styled(motion.div)`
     
   
   `};
+
   ${mediaQueries(20)`
     width: 60vw;
     
@@ -93,55 +94,8 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
-  .pic {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 100%;
-    height: auto;
-  }
-  ${mediaQueries(50)`
-      width: 100%;
-    height: 50%;
-      .pic {
-    
-    width: 70%;
-    
-  }
-
-  `};
-
-  ${mediaQueries(40)`
-  
-      .pic {
-    
-    width: 80%;
-    
-  }
-
-  `};
-
-  ${mediaQueries(30)`
-     
-
-      .pic {
-    
-    width: 90%;
-    
-  }
-
-  `};
-  ${mediaQueries(20)`
-     
-
-     .pic {
-   
-   width: 80%;
-   
- }
-
- `};
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; /* Центрируем содержимое по вертикали */
 `;
 
 const Text = styled(motion.div)`
@@ -161,35 +115,24 @@ const Text = styled(motion.div)`
 
     ${mediaQueries(40)`
         font-size: calc(0.5rem + 1vw);
-
-
   `};
   }
 
   ${mediaQueries(40)`
         font-size: calc(1rem + 1.5vw);
-
-
   `};
   ${mediaQueries(20)`
          padding: 1rem;
-
-
-
   `};
 `;
 
 const HISTORY = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.isActive ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 `;
 
 const Intro = () => {
-  const [click, setClick] = useState(false);
-  const [path, setpath] = useState('');
-  const mq = window.matchMedia('(max-width: 50em)').matches;
-  const handleClick = () => setClick(!click);
   const [height, setHeight] = useState('55vh');
 
   useEffect(() => {
@@ -210,32 +153,23 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>1986</h1>
-
           <h3>Чернобыль</h3>
-
           <h6>Авария на ЧАЭС</h6>
-
-          <HISTORY
-            onClick={() => setClick(false)}
-            click={mq ? +false : +click}
-            to="/history"
-          >
+          <HISTORY to="/history">
             <h8>История</h8>
           </HISTORY>
         </Text>
       </SubBox>
       <SubBox>
-        <NavLink
-          onClick={() => setClick(false)}
-          click={mq ? +false : +click}
-          to="/photoalbum"
-        >
+        <NavLink to="/photoalbum">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2 }}
+            className="pic"
+            style={{ width: '100%', height: '100%' }}
           >
-            <img className="pic" src={gasMask} alt="Choto" />
+            <img src={gasMask} alt="Choto" style={{ width: '100%', height: '100%' }} />
           </motion.div>
         </NavLink>
       </SubBox>

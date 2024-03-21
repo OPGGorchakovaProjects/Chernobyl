@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ReactComponent as CompareIcon } from './img/rad.svg';
 import './styles.css';
 import './images';
+
 const Slider = ({ topImage, bottomImage }) => {
   const [isResizing, setIsResizing] = useState(false);
   const topImageRef = useRef();
@@ -13,9 +14,8 @@ const Slider = ({ topImage, bottomImage }) => {
 
     if (x >= left && x <= width + left - handleWidth) {
       handleRef.current.style.left = `${((x - left) / width) * 100}%`;
-      topImageRef.current.style.clipPath = `inset(0 ${
-        100 - ((x - left) / width) * 100
-      }% 0 0)`;
+      topImageRef.current.style.clipPath = `inset(0 ${100 - ((x - left) / width) * 100
+        }% 0 0)`;
     }
   }, []);
 
@@ -49,20 +49,21 @@ const Slider = ({ topImage, bottomImage }) => {
 
   const onKeyDown = useCallback(
     (e) => {
-      const { offsetLeft, offsetParent } = handleRef.current;
+      if (handleRef.current) {
+        const { offsetLeft, offsetParent } = handleRef.current;
 
-      if (e.code === 'ArrowLeft') {
-        setPositioning(offsetLeft + offsetParent.offsetLeft - 10);
-      }
+        if (e.code === 'ArrowLeft') {
+          setPositioning(offsetLeft + offsetParent.offsetLeft - 10);
+        }
 
-      if (e.code === 'ArrowRight') {
-        setPositioning(offsetLeft + offsetParent.offsetLeft + 10);
+        if (e.code === 'ArrowRight') {
+          setPositioning(offsetLeft + offsetParent.offsetLeft + 10);
+        }
       }
     },
     [setPositioning]
   );
 
-  // Add keydown event on mount
   useEffect(() => {
     window.addEventListener('keydown', onKeyDown);
   }, [onKeyDown]);
