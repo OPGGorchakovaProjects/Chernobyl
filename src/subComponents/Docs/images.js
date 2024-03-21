@@ -9,7 +9,6 @@ const images = [
     {
         source: require('./Images/2/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/2/1.png'),
             require('./Images/2/2.png'),
@@ -19,7 +18,6 @@ const images = [
     {
         source: require('./Images/3/1.jpg'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/3/1.jpg'),
             require('./Images/3/2.jpg'),
@@ -28,7 +26,6 @@ const images = [
     {
         source: require('./Images/4/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/4/1.png'),
         ]
@@ -36,7 +33,6 @@ const images = [
     {
         source: require('./Images/5/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/5/1.png'),
             require('./Images/5/2.png'),
@@ -46,7 +42,6 @@ const images = [
     {
         source: require('./Images/6/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/6/1.png'),
             require('./Images/6/2.png'),
@@ -56,7 +51,6 @@ const images = [
     {
         source: require('./Images/7/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/7/1.png'),
             require('./Images/7/2.png'),
@@ -68,7 +62,6 @@ const images = [
     {
         source: require('./Images/8/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/8/1.png'),
             require('./Images/8/2.png'),
@@ -84,7 +77,6 @@ const images = [
     {
         source: require('./Images/9/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/9/1.png'),
             require('./Images/9/2.png'),
@@ -97,7 +89,6 @@ const images = [
     {
         source: require('./Images/10/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/10/1.png'),
             require('./Images/10/2.png'),
@@ -113,7 +104,6 @@ const images = [
     {
         source: require('./Images/11/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/11/1.png'),
             require('./Images/11/2.png'),
@@ -131,7 +121,6 @@ const images = [
     {
         source: require('./Images/12/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/12/1.png'),
             require('./Images/12/2.png'),
@@ -145,7 +134,6 @@ const images = [
     {
         source: require('./Images/13/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/13/1.png'),
             require('./Images/13/2.png'),
@@ -164,7 +152,6 @@ const images = [
     {
         source: require('./Images/14/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/14/1.png'),
             require('./Images/14/2.png'),
@@ -180,7 +167,6 @@ const images = [
     {
         source: require('./Images/15/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/15/1.png'),
             require('./Images/15/2.png'),
@@ -192,7 +178,6 @@ const images = [
     {
         source: require('./Images/16/1.jpg'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/16/1.jpg'),
             require('./Images/16/2.jpg'),
@@ -202,7 +187,6 @@ const images = [
     {
         source: require('./Images/17/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/17/1.png'),
             require('./Images/17/2.png'),
@@ -211,7 +195,6 @@ const images = [
     {
         source: require('./Images/18/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/18/1.png'),
             require('./Images/18/2.png'),
@@ -220,7 +203,6 @@ const images = [
     {
         source: require('./Images/19/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/19/1.png'),
             require('./Images/19/2.png'),
@@ -230,7 +212,6 @@ const images = [
     {
         source: require('./Images/20/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/20/1.png'),
             require('./Images/20/2.png'),
@@ -239,7 +220,6 @@ const images = [
     {
         source: require('./Images/21/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/21/1.png'),
             require('./Images/21/2.png'),
@@ -249,7 +229,6 @@ const images = [
     {
         source: require('./Images/22/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/22/1.png'),
             require('./Images/22/2.png'),
@@ -260,7 +239,6 @@ const images = [
     {
         source: require('./Images/23/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/23/1.png'),
             require('./Images/23/2.png'),
@@ -271,7 +249,6 @@ const images = [
     {
         source: require('./Images/24/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/24/1.png'),
             require('./Images/24/2.png'),
@@ -293,7 +270,6 @@ const images = [
     {
         source: require('./Images/25/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/23/1.png'),
             require('./Images/23/2.png'),
@@ -303,7 +279,6 @@ const images = [
     {
         source: require('./Images/26/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/26/1.png'),
             require('./Images/26/2.png'),
@@ -313,7 +288,6 @@ const images = [
     {
         source: require('./Images/27/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/27/1.png'),
             require('./Images/27/2.png'),
@@ -323,7 +297,6 @@ const images = [
     {
         source: require('./Images/28/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/28/1.png'),
             require('./Images/28/2.png'),
@@ -332,7 +305,6 @@ const images = [
     {
         source: require('./Images/29/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/29/1.png'),
             require('./Images/29/2.png'),
@@ -341,7 +313,6 @@ const images = [
     {
         source: require('./Images/30/1.jpg'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/30/1.jpg'),
             require('./Images/30/2.jpg'),
@@ -350,7 +321,6 @@ const images = [
     {
         source: require('./Images/31/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/31/1.png'),
         ]
@@ -358,7 +328,6 @@ const images = [
     {
         source: require('./Images/32/1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/32/1.png'),
             require('./Images/32/2.png'),
@@ -375,7 +344,6 @@ const images = [
     {
         source: require('./Images/infoAboutMoving.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/infoAboutMoving.png'),
         ]
@@ -383,7 +351,6 @@ const images = [
     {
         source: require('./Images/InfAboutWomen.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/InfAboutWomen.png'),
         ]
@@ -391,7 +358,6 @@ const images = [
     {
         source: require('./Images/Letter1.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/Letter1.png'),
         ]
@@ -399,7 +365,6 @@ const images = [
     {
         source: require('./Images/LetterAboutCancel.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/LetterAboutCancel.png'),
         ]
@@ -407,7 +372,6 @@ const images = [
     {
         source: require('./Images/LetterGrahov.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/LetterGrahov.png'),
         ]
@@ -415,7 +379,6 @@ const images = [
     {
         source: require('./Images/LetterMinist.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/LetterMinist.png'),
         ]
@@ -423,7 +386,6 @@ const images = [
     {
         source: require('./Images/Obj194.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/Obj194.png'),
         ]
@@ -431,7 +393,6 @@ const images = [
     {
         source: require('./Images/predsedGom.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/predsedGom.png'),
         ]
@@ -439,7 +400,6 @@ const images = [
     {
         source: require('./Images/Raspr515.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/Raspr515.png'),
         ]
@@ -447,7 +407,6 @@ const images = [
     {
         source: require('./Images/Boom.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/Boom.png'),
         ]
@@ -455,7 +414,6 @@ const images = [
     {
         source: require('./Images/Chaes.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/Chaes.png'),
         ]
@@ -463,7 +421,6 @@ const images = [
     {
         source: require('./Images/document.png'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/document.png'),
         ]
@@ -471,7 +428,6 @@ const images = [
     {
         source: require('./Images/str2.jpg'),
         title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        description: '19 АВГУСТА 1941 - 26 НОЯБРЯ 1943',
         additionalImages: [
             require('./Images/str2.jpg'),
             require('./Images/str3.jpg'),

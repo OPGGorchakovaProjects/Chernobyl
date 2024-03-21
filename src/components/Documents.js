@@ -53,62 +53,64 @@ const Documents = () => {
     };
 
     return (
-        <main>
-            <h2>Секреты Припяти: <br /> Чернобыльские документы</h2>
-            <PowerButton />
-            <div className="photo-grid">
-                {imagesData.map((image, index) => (
-                    <div className="container" key={index}>
-                        <div className='text-container'>
-                            <h1>{image.title}</h1>
-                            <p>{image.description}</p>
-                        </div>
-                        <div className="image-container-first">
-                            <div className="image-container">
-                                <img src={image.source} alt="error" />
-                                <Button onClick={() => handleOpenModal(image)} className="modal-button">
-                                    Открыть
-                                </Button>
+        <div id="body">
+            <main id="main">
+                <h2 id="h2">Секреты Припяти: <br /> Чернобыльские документы</h2>
+                <PowerButton />
+                <div className="photo-grid">
+                    {imagesData.map((image, index) => (
+                        <div className="container" key={index}>
+                            <div className='text-container'>
+                                <h1 id="h1">{image.title}</h1>
+                                <p id="p">{image.description}</p>
+                            </div>
+                            <div className="image-container-first">
+                                <div className="image-container">
+                                    <img id="img" src={image.source} alt="error" />
+                                    <Button onClick={() => handleOpenModal(image)} className="modal-button">
+                                        Открыть
+                                    </Button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-            {isModalOpen && selectedImage && selectedImage.additionalImages && (
-                <Modal
-                    isOpen={isModalOpen}
-                    onRequestClose={handleCloseModal}
-                    style={{
-                        overlay: {
-                            backgroundColor: 'rgba(0, 0, 0, 0.3)'
-                        },
-                        content: {
-                            width: isMobile ? '90%' : isTablet ? '60%' : '40%',
-                            height: '90%',
-                            margin: 'auto',
-                            backgroundColor: '#333333',
-                            borderRadius: '12px',
-                            borderColor: 'transparent',
-                            justifySelf: 'center',
-                        }
-                    }}
-                    contentLabel="Модальное окно"
-                >
-                    <button onClick={handleCloseModal} className='close-button'>Закрыть</button>
-                    <div className='modalInside'>
-                        {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                            <button onClick={slideLeft} className='button-slide'>{leftarrow}</button>
-                        )}
-                        {selectedImage.additionalImages && selectedImage.additionalImages.length > 0 && (
-                            <img src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" className='image-modal-container' />
-                        )}
-                        {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                            <button onClick={slideRight} className='button-slide'>{rightarrow}</button>
-                        )}
-                    </div>
-                </Modal>
-            )}
-        </main>
+                    ))}
+                </div>
+                {isModalOpen && selectedImage && selectedImage.additionalImages && (
+                    <Modal
+                        isOpen={isModalOpen}
+                        onRequestClose={handleCloseModal}
+                        style={{
+                            overlay: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)'
+                            },
+                            content: {
+                                width: isMobile ? '90%' : isTablet ? '60%' : '40%',
+                                height: '90%',
+                                margin: 'auto',
+                                backgroundColor: '#333333',
+                                borderRadius: '12px',
+                                borderColor: 'transparent',
+                                justifySelf: 'center',
+                            }
+                        }}
+                        contentLabel="Модальное окно"
+                    >
+                        <button onClick={handleCloseModal} className='close-button'>Закрыть</button>
+                        <div className='modalInside'>
+                            {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
+                                <button onClick={slideLeft} className='button-slide'>{leftarrow}</button>
+                            )}
+                            {selectedImage.additionalImages && selectedImage.additionalImages.length > 0 && (
+                                <img id="img" src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" className='image-modal-container' />
+                            )}
+                            {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
+                                <button onClick={slideRight} className='button-slide'>{rightarrow}</button>
+                            )}
+                        </div>
+                    </Modal>
+                )}
+            </main>
+        </div>
     );
 };
 
