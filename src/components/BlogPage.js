@@ -8,20 +8,20 @@ const PowerButton = lazy(() => import('../subComponents/PowerButton'));
 
 function App() {
   return (
-    <main>
+    <div className='main'>
       <PowerButton />
       <Slider>
         {images.map(({ url, title, text, error_con }, index) => (
           <>
-            <img src={url} key={index} alt={error_con} />
+            <img className='img' src={url} key={index} alt={error_con} />
             <div className="text-container">
-              <h1>{title}</h1>
-              <p>{text}</p>
+              <h1 className='h1'>{title}</h1>
+              <p className='p'>{text}</p>
             </div>
           </>
         ))}
       </Slider>
-    </main>
+    </div>
   );
 }
 

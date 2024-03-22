@@ -8,7 +8,7 @@ const images = [
     },
     {
         source: require('./Images/2/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О последствиях аварии на Чернобыльской АЭС',
         additionalImages: [
             require('./Images/2/1.png'),
             require('./Images/2/2.png'),
@@ -17,7 +17,7 @@ const images = [
     },
     {
         source: require('./Images/3/1.jpg'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Докладная записка подполковнику',
         additionalImages: [
             require('./Images/3/1.jpg'),
             require('./Images/3/2.jpg'),
@@ -25,23 +25,14 @@ const images = [
     },
     {
         source: require('./Images/4/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О завершении расследования по уголовному делу об аварии на Чернобыльской АЭС',
         additionalImages: [
             require('./Images/4/1.png'),
         ]
     },
     {
-        source: require('./Images/5/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
-        additionalImages: [
-            require('./Images/5/1.png'),
-            require('./Images/5/2.png'),
-            require('./Images/5/3.png'),
-        ]
-    },
-    {
         source: require('./Images/6/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О проблемах освоения земель, заряженных радионуклидами',
         additionalImages: [
             require('./Images/6/1.png'),
             require('./Images/6/2.png'),
@@ -50,7 +41,7 @@ const images = [
     },
     {
         source: require('./Images/7/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О ходе выполнения приказа МЗ СССР',
         additionalImages: [
             require('./Images/7/1.png'),
             require('./Images/7/2.png'),
@@ -61,7 +52,7 @@ const images = [
     },
     {
         source: require('./Images/8/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О ходе работ по обеспечению жильем и социальнобытовым обслуживанием эвакуированного населения области',
         additionalImages: [
             require('./Images/8/1.png'),
             require('./Images/8/2.png'),
@@ -76,7 +67,7 @@ const images = [
     },
     {
         source: require('./Images/9/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О ходе выполнения дезактивационных работ в Гомельской области',
         additionalImages: [
             require('./Images/9/1.png'),
             require('./Images/9/2.png'),
@@ -88,7 +79,7 @@ const images = [
     },
     {
         source: require('./Images/10/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О возмещении материального ущерба населению',
         additionalImages: [
             require('./Images/10/1.png'),
             require('./Images/10/2.png'),
@@ -103,7 +94,7 @@ const images = [
     },
     {
         source: require('./Images/11/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О дополнительных мерах по трудоустройству, обеспечнию жильем и социально-бытовым оборудованием',
         additionalImages: [
             require('./Images/11/1.png'),
             require('./Images/11/2.png'),
@@ -120,7 +111,7 @@ const images = [
     },
     {
         source: require('./Images/12/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О проблемах, связанных с последствиями аварии на ЧАЭС',
         additionalImages: [
             require('./Images/12/1.png'),
             require('./Images/12/2.png'),
@@ -133,7 +124,7 @@ const images = [
     },
     {
         source: require('./Images/13/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Об улучшении материального положения населения',
         additionalImages: [
             require('./Images/13/1.png'),
             require('./Images/13/2.png'),
@@ -151,7 +142,7 @@ const images = [
     },
     {
         source: require('./Images/14/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О ходе работ по ликвидации последствий аварии на Чернобыльской АЭС',
         additionalImages: [
             require('./Images/14/1.png'),
             require('./Images/14/2.png'),
@@ -166,7 +157,7 @@ const images = [
     },
     {
         source: require('./Images/15/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Справка начальника 4 отделения 6 отдела УКБД УРСР про усиление контролирующей работы на ЧАЭС',
         additionalImages: [
             require('./Images/15/1.png'),
             require('./Images/15/2.png'),
@@ -177,7 +168,7 @@ const images = [
     },
     {
         source: require('./Images/16/1.jpg'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Перечень сведений, подлежавших засекречиванию по вопроасам, связаанныи м аварией на блоке №4',
         additionalImages: [
             require('./Images/16/1.jpg'),
             require('./Images/16/2.jpg'),
@@ -186,7 +177,7 @@ const images = [
     },
     {
         source: require('./Images/17/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Перечень населенных пунктов, население котопых подлежит переселению в другие населенные пункты',
         additionalImages: [
             require('./Images/17/1.png'),
             require('./Images/17/2.png'),
@@ -194,7 +185,7 @@ const images = [
     },
     {
         source: require('./Images/18/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Письмо председателя Гомельского облисполкома Войтенкова Н.Г.',
         additionalImages: [
             require('./Images/18/1.png'),
             require('./Images/18/2.png'),
@@ -202,7 +193,7 @@ const images = [
     },
     {
         source: require('./Images/19/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О ходе ликвидации последствий аварии на Чернобыльской АЭС',
         additionalImages: [
             require('./Images/19/1.png'),
             require('./Images/19/2.png'),
@@ -211,7 +202,7 @@ const images = [
     },
     {
         source: require('./Images/20/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'По поручению ЦК КПСС о ходе работ, связанных с ликвидацией последствий аварии',
         additionalImages: [
             require('./Images/20/1.png'),
             require('./Images/20/2.png'),
@@ -219,7 +210,7 @@ const images = [
     },
     {
         source: require('./Images/21/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Распоряжение №301-рс о введении на территории области строгого дозиметрического контроля',
         additionalImages: [
             require('./Images/21/1.png'),
             require('./Images/21/2.png'),
@@ -228,7 +219,7 @@ const images = [
     },
     {
         source: require('./Images/22/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Распоряжение №417-рс об оплате труда работников',
         additionalImages: [
             require('./Images/22/1.png'),
             require('./Images/22/2.png'),
@@ -238,7 +229,7 @@ const images = [
     },
     {
         source: require('./Images/23/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Распоряжение №520-рс о повышении тарифных ставок работникам',
         additionalImages: [
             require('./Images/23/1.png'),
             require('./Images/23/2.png'),
@@ -248,7 +239,7 @@ const images = [
     },
     {
         source: require('./Images/24/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О результатах расследования причин аварии на Чернобыльской АЭС',
         additionalImages: [
             require('./Images/24/1.png'),
             require('./Images/24/2.png'),
@@ -269,7 +260,7 @@ const images = [
     },
     {
         source: require('./Images/25/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Об ускорении решения неотлодных вопросов, связанных с ликвидацией последствий',
         additionalImages: [
             require('./Images/23/1.png'),
             require('./Images/23/2.png'),
@@ -278,7 +269,7 @@ const images = [
     },
     {
         source: require('./Images/26/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Решение №133 О мерах по усилению лабораторного контроля за содержанием',
         additionalImages: [
             require('./Images/26/1.png'),
             require('./Images/26/2.png'),
@@ -287,7 +278,7 @@ const images = [
     },
     {
         source: require('./Images/27/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Решение №161-9 о мероприятиях по совместной деятельности областных и районных структур по контролю за обстановкой',
         additionalImages: [
             require('./Images/27/1.png'),
             require('./Images/27/2.png'),
@@ -296,7 +287,7 @@ const images = [
     },
     {
         source: require('./Images/28/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Решение №162 о сносе малых населенных пунктов в',
         additionalImages: [
             require('./Images/28/1.png'),
             require('./Images/28/2.png'),
@@ -304,7 +295,7 @@ const images = [
     },
     {
         source: require('./Images/29/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Решение №165-13 о переселени населения и вывозе поголовья скота из зон повышенной радиации',
         additionalImages: [
             require('./Images/29/1.png'),
             require('./Images/29/2.png'),
@@ -312,7 +303,7 @@ const images = [
     },
     {
         source: require('./Images/30/1.jpg'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Справка на 28 апреля 1986г',
         additionalImages: [
             require('./Images/30/1.jpg'),
             require('./Images/30/2.jpg'),
@@ -320,14 +311,14 @@ const images = [
     },
     {
         source: require('./Images/31/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Об аварии на блоке №4 Чернобыльской АЭС',
         additionalImages: [
             require('./Images/31/1.png'),
         ]
     },
     {
         source: require('./Images/32/1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Пропускные документы',
         additionalImages: [
             require('./Images/32/1.png'),
             require('./Images/32/2.png'),
@@ -343,91 +334,91 @@ const images = [
     },
     {
         source: require('./Images/infoAboutMoving.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Информация о переселении аселения из зоны аварии на ЧАЭС',
         additionalImages: [
             require('./Images/infoAboutMoving.png'),
         ]
     },
     {
         source: require('./Images/InfAboutWomen.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Информация о трудоустройстве женщин',
         additionalImages: [
             require('./Images/InfAboutWomen.png'),
         ]
     },
     {
         source: require('./Images/Letter1.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Служебное письмо о выделении капитальных вложений для проведения I этапа работ по переселению населения',
         additionalImages: [
             require('./Images/Letter1.png'),
         ]
     },
     {
         source: require('./Images/LetterAboutCancel.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Письмо об оказании помощи при укомплектовании спциалистами учреждений культуры',
         additionalImages: [
             require('./Images/LetterAboutCancel.png'),
         ]
     },
     {
         source: require('./Images/LetterGrahov.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Письмо о выделении необходимых капитальных вложений для своевременного обеспечения населения',
         additionalImages: [
             require('./Images/LetterGrahov.png'),
         ]
     },
     {
         source: require('./Images/LetterMinist.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Письмо о размещение в г.Гомеле республиканского специализированного диспансера по выявлению',
         additionalImages: [
             require('./Images/LetterMinist.png'),
         ]
     },
     {
         source: require('./Images/Obj194.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Решение №194 о регистрации Устава Гомельского областного благотворительного фонда',
         additionalImages: [
             require('./Images/Obj194.png'),
         ]
     },
     {
         source: require('./Images/predsedGom.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Информация о составе переселяемых семей',
         additionalImages: [
             require('./Images/predsedGom.png'),
         ]
     },
     {
         source: require('./Images/Raspr515.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Распоряжение №515-рс об эвакуации жителей',
         additionalImages: [
             require('./Images/Raspr515.png'),
         ]
     },
     {
         source: require('./Images/Boom.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'О взрыве на АЭС',
         additionalImages: [
             require('./Images/Boom.png'),
         ]
     },
     {
         source: require('./Images/Chaes.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Об аварии на ЧАЭС им В.И.Ленина',
         additionalImages: [
             require('./Images/Chaes.png'),
         ]
     },
     {
         source: require('./Images/document.png'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Справка по сообщение главврача',
         additionalImages: [
             require('./Images/document.png'),
         ]
     },
     {
         source: require('./Images/str2.jpg'),
-        title: 'ПЕРИОД ОККУПАЦИИ Г.ГОМЕЛЯ',
+        title: 'Причина и анализ аварии',
         additionalImages: [
             require('./Images/str2.jpg'),
             require('./Images/str3.jpg'),

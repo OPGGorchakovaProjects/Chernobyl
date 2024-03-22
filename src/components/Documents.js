@@ -85,12 +85,12 @@ const Documents = () => {
                             },
                             content: {
                                 width: isMobile ? '90%' : isTablet ? '60%' : '40%',
-                                height: '90%',
+                                height: isMobile ? '70%' : '90%',
                                 margin: 'auto',
                                 backgroundColor: '#333333',
                                 borderRadius: '12px',
                                 borderColor: 'transparent',
-                                justifySelf: 'center',
+                                justifyItems: 'center'
                             }
                         }}
                         contentLabel="Модальное окно"
