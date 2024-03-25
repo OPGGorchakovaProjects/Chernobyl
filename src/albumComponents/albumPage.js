@@ -1,48 +1,46 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Slider from './beforeAfter/slider';
-import { topImage, bottomImage } from './beforeAfter/images';
+import images from './images.js';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './style.css';
 
-// import required modules
 import { Pagination, Navigation } from 'swiper/modules';
 import PowerButton from '../subComponents/PowerButton';
 
 export default function AlbumPage() {
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    setSlides(images);
+  }, []);
+
   return (
     <div id="main">
       <PowerButton />
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        allowTouchMove={false}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <Slider topImage={topImage} bottomImage={bottomImage} />
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+      <div className='swiper'>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          allowTouchMove={false}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {slides.map((image) => (
+            <SwiperSlide key={image.id}>
+              <Slider topImage={image.topImage} bottomImage={image.bottomImage} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { motion } from 'framer-motion';
 
 //Components
@@ -178,6 +178,16 @@ const DarkDiv = styled.div`
 const Main = () => {
   const [click, setClick] = useState(false);
   const [path, setpath] = useState('');
+  const [height, setHeight] = useState('55vh');
+
+  React.useEffect(() => {
+    if (window.matchMedia('(max-width: 50em)').matches) {
+      setHeight('70vh');
+    }
+    if (window.matchMedia('(max-width: 20em)').matches) {
+      setHeight('60vh');
+    }
+  }, []);
 
   const handleClick = () => setClick(!click);
 
@@ -360,7 +370,7 @@ const Main = () => {
           </BottomBar>
         </Container>
 
-        {click ? <Intro click={click} /> : null}
+        {click ? <Intro height={height} /> : null}
       </MainContainer>
     </Suspense>
   );
