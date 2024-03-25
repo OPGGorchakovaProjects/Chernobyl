@@ -14,7 +14,7 @@ img {
 
 .comparison-slider {
   margin: 50px auto;
-  max-width: 800px;
+  max-width: 70%;
   position: relative;
   overflow: hidden;
   box-shadow: 0 15px 15px rgb(0 0 0 / 25%);
@@ -39,7 +39,7 @@ img {
 
 .handle {
   position: absolute;
-  left: 50%;
+  left: 49%;
   width: 3px;
   height: 100%;
   background: white;
