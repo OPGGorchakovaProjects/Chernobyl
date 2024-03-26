@@ -6,6 +6,13 @@ const Slider = ({ topImage, bottomImage }) => {
   const [isResizing, setIsResizing] = useState(false);
   const topImageRef = useRef();
   const handleRef = useRef(null);
+  const [isDefault, setIsDefault] = useState(true);
+
+  useEffect(() => {
+    if (topImageRef.current) {
+      topImageRef.current.style.clipPath = `inset(0 50% 0 0)`;
+    }
+  }, []);
 
   const setPositioning = useCallback((x) => {
     if (!handleRef.current) return;
@@ -15,6 +22,7 @@ const Slider = ({ topImage, bottomImage }) => {
     if (x >= left && x <= width + left - handleWidth) {
       handleRef.current.style.left = `${((x - left) / width) * 100}%`;
       topImageRef.current.style.clipPath = `inset(0 ${100 - ((x - left) / width) * 100}% 0 0)`;
+      setIsDefault(false);
     }
   }, []);
 
@@ -26,6 +34,7 @@ const Slider = ({ topImage, bottomImage }) => {
       } else if (e.touches[0] && e.touches[0].clientX) {
         setPositioning(e.touches[0].clientX);
       }
+
     },
     [setPositioning]
   );
@@ -94,7 +103,11 @@ const Slider = ({ topImage, bottomImage }) => {
           <CompareIcon />
         </div>
         <div ref={topImageRef} className="comparison-item top">
-          <img draggable="false" src={topImage.src} alt={topImage.alt} />
+          <img
+            draggable="false"
+            src={isDefault ? topImage.src : topImage.src}
+            alt={topImage.alt}
+          />
         </div>
         <div className="comparison-item">
           <img draggable="false" src={bottomImage.src} alt={bottomImage.alt} />
