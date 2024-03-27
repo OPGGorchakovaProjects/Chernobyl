@@ -107,16 +107,6 @@ const Text = styled(motion.div)`
   flex-direction: column;
   justify-content: space-evenly;
 
-  & > *:last-child {
-    color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
-
-    font-size: calc(0.5rem + 1.5vw);
-    font-weight: 300;
-
-    ${mediaQueries(40)`
-        font-size: calc(0.5rem + 1vw);
-  `};
-  }
 
   ${mediaQueries(40)`
         font-size: calc(1rem + 1.5vw);
@@ -126,10 +116,11 @@ const Text = styled(motion.div)`
   `};
 `;
 
-const HISTORY = styled(NavLink)`
-  color: ${(props) => (props.isActive ? props.theme.body : props.theme.text)};
-  text-decoration: none;
+const Link = styled(NavLink)`
+  color: #fff;
+  text-decoration: underline;
   z-index: 1;
+  margin-top: 5%;
 `;
 
 const Intro = () => {
@@ -155,9 +146,12 @@ const Intro = () => {
           <h1>1986</h1>
           <h3>Чернобыль</h3>
           <h6>Авария на ЧАЭС</h6>
-          <HISTORY to="/history">
-            <h8>История</h8>
-          </HISTORY>
+          <Link to="/history">
+            <text>История</text>
+          </Link>
+          <Link to="/museum">
+            <text>Музеи</text>
+          </Link>
         </Text>
       </SubBox>
       <SubBox>
@@ -173,7 +167,7 @@ const Intro = () => {
           </motion.div>
         </NavLink>
       </SubBox>
-    </Box>
+    </Box >
   );
 };
 

@@ -28,6 +28,7 @@ export default function AlbumPage() {
           loop={true}
           pagination={{
             clickable: true,
+            
           }}
           navigation={true}
           allowTouchMove={false}

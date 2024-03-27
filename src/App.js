@@ -14,6 +14,7 @@ const VillagePage = lazy(() => import('./components/VillagePage'));
 const HistoryPage = lazy(() => import('./components/HistoryPage'));
 const Documents = lazy(() => import('./components/Documents'));
 const AlbumPage = lazy(() => import('./albumComponents/albumPage'));
+const Museum = lazy(() => import('./components/Museum'));
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,8 @@ function App() {
               <Route path="/documents" element={<Documents />} />
 
               <Route path="/photoalbum" element={<AlbumPage />} />
+
+              <Route path="/museum" element={<Museum />} />
 
               <Route path="*" element={<Main />} />
             </Routes>
