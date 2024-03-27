@@ -1,13 +1,13 @@
 body {
   font-family: 'Karla', sans-serif;
-  background-color: #343434;
-  margin: 20px;
+  margin: 0;
 }
-Title,
-h1,
-span {
+
+.text {
   color: white;
 }
-h1 {
-  text-align: center;
+
+.App {
+  padding: 20px;
+  background-color: #343434;
 }
