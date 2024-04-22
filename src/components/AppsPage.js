@@ -2,17 +2,15 @@ import { motion } from 'framer-motion';
 import styled, { ThemeProvider } from 'styled-components';
 import { lazy, Suspense } from 'react';
 import { lightTheme, mediaQueries } from './Themes';
+import { NavLink } from 'react-router-dom';
 
 import { Android, Site, QrCode } from './AllSvgs';
 import Loading from '../subComponents/Loading';
 
-//Components
 const SocialIcons = lazy(() => import('../subComponents/SocialIcons'));
 const PowerButton = lazy(() => import('../subComponents/PowerButton'));
 const LogoComponent = lazy(() => import('../subComponents/LogoComponent'));
-const ParticlesComponent = lazy(() =>
-  import('../subComponents/ParticlesComponent')
-);
+const ParticlesComponent = lazy(() => import('../subComponents/ParticlesComponent'));
 const BigTitle = lazy(() => import('../subComponents/BigTitle'));
 
 const Box = styled(motion.div)`
@@ -25,21 +23,16 @@ const Box = styled(motion.div)`
   align-items: center;
 
   ${mediaQueries(50)`
-            flex-direction:column;  
-            padding:8rem 0;
-height:auto;
-            &>*:nth-child(5){
-              margin-bottom:5rem;
-            }
-           
+    flex-direction:column;  
+    padding:8rem 0;
+    height:auto;
+    &>*:nth-child(5){ margin-bottom:5rem; }
   `};
+
   ${mediaQueries(30)`
-           
-            &>*:nth-child(5){
-              margin-bottom:4rem;
-            }
-           
+    &>*:nth-child(5){ margin-bottom:4rem; }           
   `};
+
 `;
 
 const Main = styled(motion.div)`
@@ -54,17 +47,15 @@ const Main = styled(motion.div)`
   cursor: pointer;
 
   ${mediaQueries(60)`
-            height: 55vh;
+    height: 55vh;
   `};
 
   ${mediaQueries(50)`
-              width: 50vw;
-              height: max-content;
-
+    width: 50vw;
+    height: max-content;
   `};
 
   font-family: 'Ubuntu Mono', monospace;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,23 +73,23 @@ const Title = styled.h2`
   font-size: calc(1em + 1vw);
 
   ${mediaQueries(60)`
-          font-size:calc(0.8em + 1vw);
+    font-size:calc(0.8em + 1vw);
   `};
 
   ${mediaQueries(50)`
-          font-size:calc(1em + 2vw);
-          margin-bottom:1rem;
+    font-size:calc(1em + 2vw);
+    margin-bottom:1rem;
   `};
 
   ${mediaQueries(30)`
-                      font-size:calc(1em + 1vw);
+    font-size:calc(1em + 1vw);
   `};
   ${mediaQueries(25)`
-                      font-size:calc(0.8em + 1vw);
-                      svg{
-                        width:30px;
-                        height:30px;
-                      }
+    font-size:calc(0.8em + 1vw);
+    svg{
+      width:30px;
+      height:30px;
+    }
   `};
 
   ${Main}:hover & {
@@ -121,22 +112,16 @@ const Description = styled.div`
   }
 
   ${mediaQueries(50)`
-            font-size: calc(0.8em + 1vw);
+    font-size: calc(0.8em + 1vw);
 
   `};
 
   ${mediaQueries(30)`
-                      font-size:calc(0.7em + 1vw);
-
-              
-
+    font-size:calc(0.7em + 1vw);
   `};
 
   ${mediaQueries(25)`
-                      font-size:calc(0.5em + 1vw);
-
-              
-
+    font-size:calc(0.5em + 1vw);
   `};
 
   strong {
@@ -155,6 +140,17 @@ const apkClick = () => {
     '_blank'
   );
 };
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    color: white;
+  }
+`;
 
 const AppsPage = () => {
   return (
@@ -179,13 +175,6 @@ const AppsPage = () => {
               Мобильная игра для операционной ситемы Андройд
             </Description>
             <Description>
-              <strong>Игра:</strong> <br />
-              <ul>
-                <li>...</li>
-                <li>...</li>
-              </ul>
-            </Description>
-            <Description>
               <strong>Требования:</strong> <br />
               <ul>
                 <li>Устройство с операционной системой Андройд</li>
@@ -195,20 +184,24 @@ const AppsPage = () => {
               <QrCode />
             </Description>
           </Main>
+
           <Main>
-            <Title>
-              <Site width={40} height={40} /> ВЕБ-игра "Черобыль"
-            </Title>
-            <Description>Скоро...</Description>
-            <Description>
-              <strong></strong> <br />
-              <p></p>
-            </Description>
-            <Description>
-              <strong></strong> <br />
-              <p></p>
-            </Description>
+            <StyledNavLink to="/ChernobylTests">
+              <>
+                <Title>
+                  <Site width={40} height={40} /> ВЕБ-игра "Чернобыль"
+                </Title>
+                <Description>Тестовые вопросы по теме "Чернобыль"</Description>
+                <Description>
+                </Description>
+                <Description>
+                  <strong></strong> <br />
+                  <p></p>
+                </Description>
+              </>
+            </StyledNavLink>
           </Main>
+
           <BigTitle text="ПРИЛОЖЕНИЯ" top="80%" right="30%" />
         </Box>
       </Suspense>

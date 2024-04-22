@@ -10,6 +10,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
+import '../subComponents/Museum/style.css'
 
 const StyledCarousel = styled.div`
   width: 80%;
@@ -18,7 +19,7 @@ const StyledCarousel = styled.div`
   .slick-prev::before,
   .slick-next::before {
     color: #242424;
-  }
+  } 
 `;
 
 const CarouselImage = styled.img`
@@ -48,101 +49,6 @@ const SliderWithPhotos = ({ photos }) => {
   );
 };
 
-const Box = styled(motion.div)`
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  ${mediaQueries(50)`
-    flex-direction: column;  
-    padding: 8rem 0;
-    height: auto;
-    & > *:nth-child(5){
-      margin-bottom: 5rem;
-    }   
-  `};
-
-  ${mediaQueries(30)`
-    & > *:nth-child(5){
-      margin-bottom: 4rem;
-    }
-  `};
-`;
-
-const Main = styled(motion.div)`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
-  background-color: #fff;
-  padding-top: 2rem;
-  width: 30vw;
-  height: 60vh;
-  z-index: 3;
-  line-height: 1.5;
-  cursor: pointer;
-  align-items: center;
-
-  ${mediaQueries(60)`
-    height: 55vh;
-  `};
-
-  ${mediaQueries(50)`
-    width: 50vw;
-    height: max-content;
-  `};
-
-  font-family: 'Ubuntu Mono', monospace;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const Title = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(1em + 1vw);
-
-  ${mediaQueries(60)`
-    font-size: calc(0.8em + 1vw);
-  `};
-
-  ${mediaQueries(50)`
-    font-size: calc(1em + 2vw);
-    margin-bottom: 1rem;
-  `};
-
-  ${mediaQueries(30)`
-    font-size: calc(1em + 1vw);
-  `};
-
-  ${mediaQueries(25)`
-    font-size: calc(0.8em + 1vw);
-    svg {
-      width: 30px;
-      height: 30px;
-    }
-  `};
-
-  ${Main}:hover & {
-    & > * {
-      fill: ${(props) => props.theme.body};
-    }
-  }
-
-  & > *:first-child {
-    margin-right: 1rem;
-  }
-`;
-
-const QRImage = styled.img`
-  width: 40%; 
-  height: auto; 
-`;
-
 const Museum = () => {
   const photosGomel = [
     require('../albumComponents/beforeAfter/img/leftSide/15.jpg'),
@@ -161,21 +67,21 @@ const Museum = () => {
       <ParticlesComponent theme="light" />
       <PowerButton />
       <Suspense fallback={<Loading />}>
-        <Box>
-          <Main>
-            <Title>Гомель</Title>
+        <div className='container'>
+          <div className='box'>
+            <div className='Title'>Гомель</div>
             <SliderWithPhotos photos={photosGomel} />
-            <QRImage src={process.env.PUBLIC_URL + "/GomelQR.png"} alt="QR код для Гомеля" />
-          </Main>
-          <Main>
-            <Title>Брагин</Title>
+            <img className='qrcode ' src={process.env.PUBLIC_URL + "/GomelQR.png"} alt="QR код для Гомеля" />
+          </div>
+          <div className='box'>
+            <div className='Title'>Брагин</div>
             <SliderWithPhotos photos={photosBragin} />
-            <QRImage src={process.env.PUBLIC_URL + "/BraginQR.png"} alt="QR код для Брагина" />
-          </Main>
+            <img className='qrcode' src={process.env.PUBLIC_URL + "/BraginQR.png"} alt="QR код для Брагина" />
+          </div>
           <Suspense fallback={<div>Loading...</div>}>
             <BigTitle text="Музеи" top="80%" right="36%" />
           </Suspense>
-        </Box>
+        </div>
       </Suspense>
     </ThemeProvider>
   );

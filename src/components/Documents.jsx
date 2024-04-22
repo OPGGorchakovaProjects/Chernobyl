@@ -3,12 +3,10 @@ import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 import { lazy } from 'react';
 import imagesData from '../subComponents/Docs/images';
+import { ChevronBackOutline, ChevronForwardOutline } from 'react-ionicons';
 import '../subComponents/Docs/style.css';
 
 const PowerButton = lazy(() => import('../subComponents/PowerButton'));
-
-const leftarrow = '<';
-const rightarrow = '>';
 
 const Documents = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -20,7 +18,7 @@ const Documents = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 600);
-            setIsTablet(window.innerWidth <= 900);
+            setIsTablet(window.innerWidth <= 1100);
         };
 
         handleResize();
@@ -53,20 +51,22 @@ const Documents = () => {
     };
 
     return (
-        <div className="body">
-            <main className="main">
-                <h2 className="h2">Секреты Припяти: <br /> Чернобыльские документы</h2>
-                <PowerButton />
+        <div className="main-doc">
+            <PowerButton />
+            <div className='doc-container'>
+                <div className='doc-title'>
+                    <h2>Секреты Припяти: <br /> Чернобыльские документы</h2>
+                </div>
                 <div className="photo-grid">
                     {imagesData.map((image, index) => (
-                        <div className="container" key={index}>
-                            <div className='text-container'>
-                                <h1 className="h1">{image.title}</h1>
-                                <p className="p">{image.description}</p>
+                        <div className="container-doc" key={index}>
+                            <div>
+                                <h1>{image.title}</h1>
+                                <p>{image.description}</p>
                             </div>
-                            <div className="image-container-first">
+                            <div className="image-height">
                                 <div className="image-container">
-                                    <img className="img" src={image.source} alt="error" />
+                                    <img src={image.source} alt="error" />
                                     <Button onClick={() => handleOpenModal(image)} className="modal-button">
                                         Открыть
                                     </Button>
@@ -81,6 +81,7 @@ const Documents = () => {
                         onRequestClose={handleCloseModal}
                         style={{
                             overlay: {
+                                display: 'flex',
                                 backgroundColor: 'rgba(0, 0, 0, 0.3)'
                             },
                             content: {
@@ -90,7 +91,8 @@ const Documents = () => {
                                 backgroundColor: '#333333',
                                 borderRadius: '12px',
                                 borderColor: 'transparent',
-                                justifyItems: 'center'
+                                justifySelf: 'center',
+                                alignContent: 'center'
                             }
                         }}
                         contentLabel="Модальное окно"
@@ -98,18 +100,30 @@ const Documents = () => {
                         <button onClick={handleCloseModal} className='close-button'>Закрыть</button>
                         <div className='modalInside'>
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                                <button onClick={slideLeft} className='button-slide'>{leftarrow}</button>
+                                <button onClick={slideLeft} className='button-slide'>
+                                    <ChevronBackOutline
+                                        color={'#fff'}
+                                        height="2.5vw"
+                                        width="2.5vw"
+                                    />
+                                </button>
                             )}
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 0 && (
-                                <img id="img" src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" className='image-modal-container' />
+                                <img src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" />
                             )}
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                                <button onClick={slideRight} className='button-slide'>{rightarrow}</button>
+                                <button onClick={slideRight} className='button-slide'>
+                                    <ChevronForwardOutline
+                                        color={'#fff'}
+                                        height="2.5vw"
+                                        width="2.5vw"
+                                    />
+                                </button>
                             )}
                         </div>
                     </Modal>
                 )}
-            </main>
+            </div>
         </div>
     );
 };

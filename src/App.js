@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
-import GlobalStyle from './globalStyles';
+import './globalStyles.css';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './components/Themes';
 import Loading from './subComponents/Loading';
@@ -15,14 +15,13 @@ const HistoryPage = lazy(() => import('./components/HistoryPage'));
 const Documents = lazy(() => import('./components/Documents'));
 const AlbumPage = lazy(() => import('./albumComponents/albumPage'));
 const Museum = lazy(() => import('./components/Museum'));
+const ChernobylTests = lazy(() => import('./components/ChernobylTests'));
 
 function App() {
   const location = useLocation();
 
   return (
     <>
-      <GlobalStyle />
-
       <ThemeProvider theme={lightTheme}>
         <Suspense fallback={<Loading />}>
           <AnimatePresence mode="wait">
@@ -44,6 +43,8 @@ function App() {
               <Route path="/photoalbum" element={<AlbumPage />} />
 
               <Route path="/museum" element={<Museum />} />
+
+              <Route path="/ChernobylTests" element={<ChernobylTests />} />
 
               <Route path="*" element={<Main />} />
             </Routes>

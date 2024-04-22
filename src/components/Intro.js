@@ -45,28 +45,20 @@ const Box = styled(motion.div)`
   ${mediaQueries(50)`
     width: 50vw;
     background-size: 100% 2px;
-
     flex-direction:column;
     justify-content:space-between;
-  
   `};
 
   ${mediaQueries(40)`
     width: 60vw;
-    
-  
   `};
 
   ${mediaQueries(30)`
     width: 70vw;
-    
-  
   `};
 
   ${mediaQueries(20)`
     width: 60vw;
-    
-  
   `};
 
   @media only screen and (max-width: 50em) {
@@ -94,8 +86,8 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
-  justify-content: center; /* Центрируем содержимое по горизонтали */
-  align-items: center; /* Центрируем содержимое по вертикали */
+  justify-content: center; 
+  align-items: center; 
 `;
 
 const Text = styled(motion.div)`

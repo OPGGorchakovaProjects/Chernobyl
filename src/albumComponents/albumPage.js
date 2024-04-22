@@ -26,10 +26,7 @@ export default function AlbumPage() {
           slidesPerView={1}
           spaceBetween={30}
           loop={true}
-          pagination={{
-            clickable: true,
-            
-          }}
+          pagination={{ clickable: true, }}
           navigation={true}
           allowTouchMove={false}
           modules={[Pagination, Navigation]}
