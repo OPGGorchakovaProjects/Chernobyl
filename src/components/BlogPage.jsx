@@ -7,7 +7,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import '../subComponents/Likvidators/style.css';
+import styles from '../subComponents/Likvidators/style.module.css';
+import '../subComponents/Likvidators/swiperStyles.css';
 import images from '../subComponents/Likvidators/images';
 
 
@@ -19,19 +20,19 @@ function BlogPage() {
   }, []);
 
   return (
-    <div className='main-people'>
+    <div className={styles.main}>
       <PowerButton />
       <Swiper
         navigation={true}
         pagination={{ type: 'fraction', }}
         keyboard={true}
         modules={[Navigation, Pagination, Keyboard]}
-        className="swiper"
+        className='swiper'
       >
         {images.map(({ url, title, text, error_con }, index) => (
           <SwiperSlide key={index}>
             <img src={url} alt={error_con} />
-            <div className="text-container-people">
+            <div className={styles.textContainer}>
               <h1>{title}</h1>
               <p>{text}</p>
             </div>

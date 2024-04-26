@@ -1,0 +1,184 @@
+body {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 20%);
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title>h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  color: #ffffff;
+  padding: 1.2em;
+  gap: 1.2rem;
+  border-radius: 10px;
+  flex-direction: column;
+  flex-basis: calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+}
+
+@media (max-width: 1200px) {
+  .box {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .title>h2 {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 750px) {
+  .box {
+    flex-basis: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .title>h2 {
+    font-size: 2em;
+  }
+
+  .imageContainer>img {
+    max-height: 80%;
+  }
+
+  .textbox h1 {
+    font-size: 1.7rem;
+  }
+}
+
+.imageContainer>img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.imageHeight {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer {
+  height: auto;
+  position: relative;
+}
+
+.modalButton,
+.buttonSlide,
+.closeButton {
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+
+.modalButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 5rem;
+  background-color: #242424;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.buttonSlide,
+.closeButton {
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.buttonSlide {
+  height: 5vw;
+  width: 2.5vw;
+  align-items: stretch;
+}
+
+@media (hover:hover) {
+  .modalButton:hover {
+    background-color: grey;
+  }
+
+  .closeButton:hover,
+  .buttonSlide:hover {
+    color: grey;
+  }
+
+}
+
+.modalButton:active,
+.buttonSlide:active,
+.closeButton:active {
+  color: #242424;
+}
+
+.modalInside {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  max-width: 100%;
+  width: auto;
+}
+
+.modalInside img {
+  max-width: 95%;
+  width: auto;
+  max-height: 95%;
+  object-fit: contain;
+}
+
+.textbox h1 {
+  margin: 0;
+}

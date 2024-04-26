@@ -1,22 +1,18 @@
 import React, { useRef } from 'react';
 import { ReactComponent as ArrowIcon } from './arrow-icon.svg';
+import styles from './Village.module.css';
 
 export const VillageItem = ({ faqItem, onClick, isOpen }) => {
   const itemRef = useRef(null);
 
   return (
-    <li className="accordion-item">
-      <button className="accordion-header" onClick={() => onClick()}>
+    <li className={styles.accordionItem}>
+      <button className={styles.accordionHeader} onClick={() => onClick()}>
         {faqItem.q}
-        <ArrowIcon className={`accordion-arrow ${isOpen ? 'active' : ''}`} />
+        <ArrowIcon className={`${styles.accordionArrow} ${isOpen ? styles.active : ''}`} />
       </button>
-      <div
-        className="accordion-collapse"
-        style={
-          isOpen ? { height: itemRef.current.scrollHeight } : { height: '0px' }
-        }
-      >
-        <div className="accordion-body" ref={itemRef}>
+      <div className={styles.accordionCollapse} style={isOpen ? { height: itemRef.current.scrollHeight } : { height: '0px' }}>
+        <div className={styles.accordionBody} ref={itemRef}>
           {faqItem.i}
           {faqItem.a}
         </div>

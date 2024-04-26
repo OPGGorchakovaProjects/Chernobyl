@@ -1,4 +1,4 @@
-import '../subComponents/historyStyle.css';
+import styles from '../subComponents/historyStyle.module.css';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -24,20 +24,20 @@ const Title = styled.div`
 
 export default function BlogPage() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <PowerButton />
-      <h1 style={{ textAlign: 'center', color: 'white' }}>История Чернобыльской АЭС</h1>
+      <h1 className={styles.title}>История Чернобыльской АЭС</h1>
       <div className="empty"></div>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="1970"
-
-          dateClassName='text' iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          dateClassName={styles.text}
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title className='text'">Строительство </h3>
-          <h4 className="vertical-timeline-element-subtitle className='text'">
+          <h3 className="vertical-timeline-element-title">Строительство </h3>
+          <h4 className="vertical-timeline-element-subtitle">
             Чернобыльской атомной электростанции (ЧАЭС)
           </h4>
           <p>
@@ -52,12 +52,13 @@ export default function BlogPage() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="26 апреля 1986"
-          dateClassName='text'
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title className='text'">Катастрофа</h3>
-          <h4 className="vertical-timeline-element-subtitle className='text'">
+          <h3 className="vertical-timeline-element-title">Катастрофа</h3>
+          <h4 className="vertical-timeline-element-subtitle">
             на Чернобыльской АЭС, Чернобыльская катастрофа —
           </h4>
           <p>
@@ -71,7 +72,7 @@ export default function BlogPage() {
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title className='text'">Разрушение</h3>
+          <h3 className="vertical-timeline-element-title">Разрушение</h3>
 
           <p>
             носило взрывной характер, реактор был полностью разрушен, и в
@@ -94,7 +95,7 @@ export default function BlogPage() {
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
-          <h3 className="vertical-timeline-element-title className='text'">Облако,</h3>
+          <h3 className="vertical-timeline-element-title">Облако,</h3>
           <p>
             образовавшееся от горящего реактора, разнесло различные
             радиоактивные материалы, и прежде всего радионуклиды йода и цезия,
@@ -106,13 +107,14 @@ export default function BlogPage() {
         </VerticalTimelineElement>
       </VerticalTimeline>
 
-      <Title className='text'>Как это было?</Title>
+      <Title>Как это было?</Title>
 
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="25 апреля 1986"
-          dateClassName='text'
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -157,7 +159,8 @@ export default function BlogPage() {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="1:23 ночи"
-          dateClassName='text'
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -171,8 +174,9 @@ export default function BlogPage() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="01:23, 
-                    dateClassName='text'26 апреля 1986"
+          date="01:23, 26 апреля 1986"
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -189,7 +193,7 @@ export default function BlogPage() {
         </VerticalTimelineElement>
       </VerticalTimeline>
 
-      <Title className='text'>Причины аварии</Title>
+      <Title>Причины аварии</Title>
 
       <VerticalTimeline>
         <VerticalTimelineElement
@@ -245,8 +249,9 @@ export default function BlogPage() {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="1991"
+          dateClassName={styles.text}
 
-          dateClassName='text' iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
           <p>
@@ -263,8 +268,9 @@ export default function BlogPage() {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="1993"
+          dateClassName={styles.text}
 
-          dateClassName='text' iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
           <p>
@@ -341,12 +347,13 @@ export default function BlogPage() {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-      <Title className='text'>Причины аварии</Title>
+      <Title>Причины аварии</Title>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="27-28 апреля 
-                    dateClassName='text'1986"
+          date="27-28 апреля 1986"
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -395,7 +402,8 @@ export default function BlogPage() {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="Час после взрыва"
-          dateClassName='text'
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >
@@ -412,8 +420,9 @@ export default function BlogPage() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="Утро 26 
-                    dateClassName='text'апреля 1986"
+          date="Утро 26 апреля 1986"
+          dateClassName={styles.text}
+
           iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
           icon={<WorkIcon />}
         >

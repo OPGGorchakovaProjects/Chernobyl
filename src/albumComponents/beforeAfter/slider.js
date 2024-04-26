@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ReactComponent as CompareIcon } from './img/rad.svg';
-import './styles.css';
+import styles from './style.module.css';
 
 const Slider = ({ topImage, bottomImage }) => {
   const [isResizing, setIsResizing] = useState(false);
@@ -93,23 +93,23 @@ const Slider = ({ topImage, bottomImage }) => {
 
   return (
     <>
-      <div className="comparison-slider">
+      <div className={styles.comparisonSlider}>
         <div
           ref={handleRef}
-          className="handle"
+          className={styles.handle}
           onMouseDown={() => setIsResizing(true)}
           onTouchStart={() => setIsResizing(true)}
         >
           <CompareIcon />
         </div>
-        <div ref={topImageRef} className="comparison-item top">
+        <div ref={topImageRef} className={styles.comparisonItemTop}>
           <img
             draggable="false"
             src={isDefault ? topImage.src : topImage.src}
             alt={topImage.alt}
           />
         </div>
-        <div className="comparison-item">
+        <div className={styles.comparisonItem}>
           <img draggable="false" src={bottomImage.src} alt={bottomImage.alt} />
         </div>
       </div>

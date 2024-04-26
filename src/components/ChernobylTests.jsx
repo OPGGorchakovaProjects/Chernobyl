@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import questions from '../subComponents/Tests/Tests.json';
-import '../subComponents/Tests/style.css';
+import styles from '../subComponents/Tests/style.module.css';
 import PowerButton from '../subComponents/PowerButton';
 
 function Tests() {
@@ -57,7 +57,7 @@ function Tests() {
         setSelectedOption(null);
     };
 
-    const progress = ((currentQuestion + 1) / questionsData.length) * 100;
+    const progress = ((currentQuestion) / questionsData.length) * 100;
     const filteredAnswers = answers.filter((answer) => answer !== null);
     const correctAnswers = filteredAnswers.filter((answer, index) => answer === questionsData[index].correct_answer).length;
     const percentage = (correctAnswers / questionsData.length) * 100;
@@ -66,8 +66,8 @@ function Tests() {
         <>
             <PowerButton />
             {!quizFinished ? (
-                <div className='main-test'>
-                    <div className='container'>
+                <div className={styles.main}>
+                    <div className={styles.container}>
                         {questionsData.length > 0 && currentQuestion < questionsData.length && (
                             <>
                                 <h2>Вопрос {currentQuestion + 1}</h2>
@@ -77,7 +77,7 @@ function Tests() {
                                         <li key={index}>
                                             <button
                                                 onClick={() => handleAnswer(option)}
-                                                className={selectedOption === option ? 'selected' : ''}
+                                                className={selectedOption === option ? styles.selected : ''}
                                             >
                                                 {option}
                                             </button>
@@ -97,20 +97,29 @@ function Tests() {
                             </>
                         )}
                     </div>
-                    <div className="progress-bar-container">
-                        <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+                    <div className={styles.barContainer}>
+                        <div className={styles.progressBar} style={{ width: `${progress}%` }}></div>
                     </div>
                 </div>
             ) : (
-                <div className='end-container'>
-                    <div className='container'>
+                <div className={styles.endContainer}>
+                    <div className={styles.container}>
                         <h2>Результаты</h2>
                         <p>Результат: {correctAnswers}/{questionsData.length}</p>
-                        <img src={require('../subComponents/Tests/classSign.png')} alt="Вы молодец" />
+                        {correctAnswers >= 10 && (
+                            <img src={require('../subComponents/Tests/like.png')} alt="Вы молодец" />
+                        )}
+                        {correctAnswers < 10 && correctAnswers >= 5 && (
+                            <img src={require('../subComponents/Tests/medium.png')} alt='Среднячок' />
+                        )}
+                        {correctAnswers < 5 && (
+                            <img src={require('../subComponents/Tests/dislike.png')} alt='Плохо' />
+                        )}
                         <p>Вы знаете о чернобыле на {Math.floor(percentage)}%</p>
                         <button onClick={restart}>Начать сначала</button>
                     </div>
                 </div>
+
             )}
         </>
     );

@@ -6,7 +6,8 @@ import images from './images.js';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './style.css';
+import styles from './style.module.css';
+import './swiperStyle.css'
 
 import { Pagination, Navigation } from 'swiper/modules';
 import PowerButton from '../subComponents/PowerButton';
@@ -19,7 +20,7 @@ export default function AlbumPage() {
   }, []);
 
   return (
-    <div id="main">
+    <div className={styles.main}>
       <PowerButton />
       <div className='swiper'>
         <Swiper

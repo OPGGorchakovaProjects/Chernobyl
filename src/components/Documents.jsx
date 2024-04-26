@@ -3,8 +3,7 @@ import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 import { lazy } from 'react';
 import imagesData from '../subComponents/Docs/images';
-import { ChevronBackOutline, ChevronForwardOutline } from 'react-ionicons';
-import '../subComponents/Docs/style.css';
+import styles from '../subComponents/Docs/style.module.css';
 
 const PowerButton = lazy(() => import('../subComponents/PowerButton'));
 
@@ -14,6 +13,9 @@ const Documents = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
+
+    const leftArrow = <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>;
+    const rightArrow = <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>;
 
     useEffect(() => {
         const handleResize = () => {
@@ -51,23 +53,23 @@ const Documents = () => {
     };
 
     return (
-        <div className="main-doc">
+        <div className={styles.main}>
             <PowerButton />
-            <div className='doc-container'>
-                <div className='doc-title'>
+            <div className={styles.container}>
+                <div className={styles.title}>
                     <h2>Секреты Припяти: <br /> Чернобыльские документы</h2>
                 </div>
-                <div className="photo-grid">
+                <div className={styles.photoGrid}>
                     {imagesData.map((image, index) => (
-                        <div className="container-doc" key={index}>
-                            <div>
+                        <div className={styles.box} key={index}>
+                            <div className={styles.textbox}>
                                 <h1>{image.title}</h1>
                                 <p>{image.description}</p>
                             </div>
-                            <div className="image-height">
-                                <div className="image-container">
+                            <div className={styles.imageHeight}>
+                                <div className={styles.imageContainer}>
                                     <img src={image.source} alt="error" />
-                                    <Button onClick={() => handleOpenModal(image)} className="modal-button">
+                                    <Button onClick={() => handleOpenModal(image)} className={styles.modalButton}>
                                         Открыть
                                     </Button>
                                 </div>
@@ -97,27 +99,19 @@ const Documents = () => {
                         }}
                         contentLabel="Модальное окно"
                     >
-                        <button onClick={handleCloseModal} className='close-button'>Закрыть</button>
-                        <div className='modalInside'>
+                        <button onClick={handleCloseModal} className={styles.closeButton}>Закрыть</button>
+                        <div className={styles.modalInside}>
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                                <button onClick={slideLeft} className='button-slide'>
-                                    <ChevronBackOutline
-                                        color={'#fff'}
-                                        height="2.5vw"
-                                        width="2.5vw"
-                                    />
+                                <button onClick={slideLeft} className={styles.buttonSlide}>
+                                    {leftArrow}
                                 </button>
                             )}
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 0 && (
                                 <img src={selectedImage.additionalImages[selectedAdditionalImageIndex]} alt="error" />
                             )}
                             {selectedImage.additionalImages && selectedImage.additionalImages.length > 1 && (
-                                <button onClick={slideRight} className='button-slide'>
-                                    <ChevronForwardOutline
-                                        color={'#fff'}
-                                        height="2.5vw"
-                                        width="2.5vw"
-                                    />
+                                <button onClick={slideRight} className={styles.buttonSlide}>
+                                    {rightArrow}
                                 </button>
                             )}
                         </div>

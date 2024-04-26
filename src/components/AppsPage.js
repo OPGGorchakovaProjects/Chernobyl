@@ -189,14 +189,13 @@ const AppsPage = () => {
             <StyledNavLink to="/ChernobylTests">
               <>
                 <Title>
-                  <Site width={40} height={40} /> ВЕБ-игра "Чернобыль"
+                  <Site width={40} height={40} /> Тестовые вопросы
                 </Title>
-                <Description>Тестовые вопросы по теме "Чернобыль"</Description>
+                <Description>по теме "Чернобыль"</Description>
+
                 <Description>
-                </Description>
-                <Description>
-                  <strong></strong> <br />
-                  <p></p>
+                  <strong>Описание:</strong> <br />
+                  <p>Благодаря данному тесту вы можете проверить уровень знаний о чернобыле</p>
                 </Description>
               </>
             </StyledNavLink>
