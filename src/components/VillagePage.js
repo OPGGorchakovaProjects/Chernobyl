@@ -27,6 +27,7 @@ const Title = styled.h1`
   margin-top: 500px;
   color: #000;
   text-shadow: 2px 2px 2px #fa6d1b;
+  font-family: Pacifico, cursive;
   @media (max-width: 768px) {
     font-size: 2em;
     text-align: center;

@@ -51,6 +51,7 @@ const Box = styled(motion.div)`
 
   ${mediaQueries(40)`
     width: 60vw;
+    align-items: center;
   `};
 
   ${mediaQueries(30)`
@@ -88,6 +89,15 @@ const SubBox = styled.div`
   display: flex;
   justify-content: center; 
   align-items: center; 
+  padding: 1rem;
+
+  ${mediaQueries(40)`
+  font-size: calc(1rem + 1.5vw);
+  margin: 0;
+  width: 100%;
+  height: 100%
+`};
+  
 `;
 
 const Text = styled(motion.div)`
@@ -102,6 +112,7 @@ const Text = styled(motion.div)`
 
   ${mediaQueries(40)`
         font-size: calc(1rem + 1.5vw);
+        margin: 0;
   `};
   ${mediaQueries(20)`
          padding: 1rem;
@@ -135,9 +146,9 @@ const Intro = () => {
     >
       <SubBox>
         <Text>
-          <h1>1986</h1>
-          <h3>Чернобыль</h3>
-          <h6>Авария на ЧАЭС</h6>
+          <h1 style={{ margin: 0 }}>1986</h1>
+          <h3>Виртуальный музей</h3>
+          <h6>Чернобыльской трагедии</h6>
           <Link to="/history">
             <text>История</text>
           </Link>
@@ -155,7 +166,7 @@ const Intro = () => {
             className="pic"
             style={{ width: '100%', height: '100%' }}
           >
-            <img src={gasMask} alt="Choto" style={{ width: '100%', height: '100%' }} />
+            <img src={gasMask} alt="Choto" style={{ width: '100%', height: '80%' }} />
           </motion.div>
         </NavLink>
       </SubBox>

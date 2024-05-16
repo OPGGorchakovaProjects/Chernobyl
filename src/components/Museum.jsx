@@ -9,24 +9,24 @@ import BigTitle from '../subComponents/BigTitle';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { motion } from 'framer-motion';
 import styles from '../subComponents/Museum/style.module.css'
 
 const StyledCarousel = styled.div`
   width: 80%;
-  height: auto;
+  max-height: 80%;
   margin: 0 auto; 
   align-items: center;
 
   .slick-prev::before,
   .slick-next::before {
     color: #242424;
+    z-index: 1;
   } 
 `;
 
 const CarouselImage = styled.img`
-  width: 100%;
-  height: auto;
+  height: 40vh;
+  width: auto;
 `;
 
 const SliderWithPhotos = ({ photos }) => {
@@ -97,12 +97,26 @@ const Museum = () => {
           <div className={styles.box}>
             <div className={styles.Title}>Гомель</div>
             <SliderWithPhotos photos={photosGomel} />
-            <img className={styles.qrcode} src={process.env.PUBLIC_URL + "/GomelQR.png"} alt="QR код для Гомеля" />
+            <div className={styles.descriptionRight}>
+
+              <img className={styles.qrcode} src={process.env.PUBLIC_URL + "/GomelQR.png"} alt="QR код для Гомеля" />
+              <div className={styles.museumTitle}>
+                <h2>Гомельский музей Чернобыльской трагедии</h2>
+              </div>
+            </div>
           </div>
+
           <div className={styles.box}>
             <div className={styles.Title}>Хойники</div>
             <SliderWithPhotos photos={photosHoiniki} />
-            <img className={styles.qrcode} src={process.env.PUBLIC_URL + "/BraginQR.png"} alt="QR код для Брагина" />
+
+            <div className={styles.descriptionLeft}>
+
+              <img className={styles.qrcode} src={process.env.PUBLIC_URL + "/HoinikiQR.png"} alt="QR код для Хойников" />
+              <div className={styles.museumTitle}>
+                <h2>Хойникский музей Чернобыльской трагедии</h2>
+              </div>
+            </div>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
             <BigTitle text="Музеи" top="80%" right="36%" />
@@ -114,3 +128,5 @@ const Museum = () => {
 };
 
 export default Museum;
+
+

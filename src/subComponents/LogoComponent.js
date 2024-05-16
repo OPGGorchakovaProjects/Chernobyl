@@ -3,6 +3,7 @@ import { DarkTheme, mediaQueries } from '../components/Themes';
 
 const Logo = styled.h1`
   display: inline-block;
+  font-size: 3rem;
   color: ${(props) =>
     props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
   font-family: 'Pacifico', cursive;
@@ -20,7 +21,7 @@ const Logo = styled.h1`
 `;
 
 const LogoComponent = (props) => {
-  return <Logo color={props.theme}>Чернобыль</Logo>;
+  return <Logo color={props.theme}>Чернобыль</Logo >;
 };
 
 export default LogoComponent;

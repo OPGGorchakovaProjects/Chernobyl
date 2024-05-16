@@ -21,6 +21,10 @@ const MainContainer = styled(motion.div)`
   position: relative;
   overflow: hidden;
 
+  h2 {
+    font-size: 3rem 
+  }
+
   h2,
   h3,
   h4,
@@ -223,18 +227,18 @@ const Main = () => {
                 onClick={() => handleClick()}
                 width={click ? 80 : 150}
                 height={click ? 80 : 150}
-                fill="currentColor"
+                fill="black"
               />
             ) : (
               <Radiation
                 onClick={() => handleClick()}
                 width={click ? 120 : 200}
                 height={click ? 120 : 200}
-                fill="currentColor"
+                fill="black"
               />
             )}
 
-            <span>НАЧАТЬ ПУТЕШЕСТВИЕ</span>
+            <span style={{ color: 'black', fontSize: '2rem' }} >НАЧАТЬ ПУТЕШЕСТВИЕ</span>
           </Center>
 
           {mq ? (

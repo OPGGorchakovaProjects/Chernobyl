@@ -84,7 +84,9 @@ const Documents = () => {
                         style={{
                             overlay: {
                                 display: 'flex',
-                                backgroundColor: 'rgba(0, 0, 0, 0.3)'
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                margin: 'auto',
+                                left: 0,
                             },
                             content: {
                                 width: isMobile ? '90%' : isTablet ? '60%' : '40%',
@@ -94,7 +96,8 @@ const Documents = () => {
                                 borderRadius: '12px',
                                 borderColor: 'transparent',
                                 justifySelf: 'center',
-                                alignContent: 'center'
+                                alignSelf: 'center',
+
                             }
                         }}
                         contentLabel="Модальное окно"
