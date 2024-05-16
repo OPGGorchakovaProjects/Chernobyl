@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ConfigDark from '../config/particlesjs-config.json';
-import ConfigLight from '../config/particlesjs-config-light.json';
+import ConfigDark from '../../config/particlesjs-config.json';
+import ConfigLight from '../../config/particlesjs-config-light.json';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 

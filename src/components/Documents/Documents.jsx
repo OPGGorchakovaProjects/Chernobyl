@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
-import { lazy } from 'react';
-import imagesData from '../subComponents/Docs/images';
-import styles from '../subComponents/Docs/style.module.css';
-
-const PowerButton = lazy(() => import('../subComponents/PowerButton'));
+import imagesData from './images.js';
+import styles from './style.module.css';
 
 const Documents = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -54,7 +51,6 @@ const Documents = () => {
 
     return (
         <div className={styles.main}>
-            <PowerButton />
             <div className={styles.container}>
                 <div className={styles.title}>
                     <h2>Секреты Припяти: <br /> Чернобыльские документы</h2>

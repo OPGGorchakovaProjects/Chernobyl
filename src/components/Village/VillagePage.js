@@ -1,11 +1,9 @@
 import React from 'react';
-import { lazy } from 'react';
-import { Village } from '../subComponents/Village/Village';
-import { faqList } from '../subComponents/Village/faqList';
+import { Village } from './Village';
+import { faqList } from './faqList';
 import styled from 'styled-components';
-import bgVillage from '../assets/Images/bgVillage.jpg';
-import { mediaQueries } from './Themes';
-const PowerButton = lazy(() => import('../subComponents/PowerButton'));
+import bgVillage from '../../assets/Images/bgVillage.jpg';
+import { mediaQueries } from '../UI/Themes';
 
 const MainContainer = styled.div`
   background-image: url(${bgVillage});
@@ -42,10 +40,8 @@ const VillagePage = () => {
       <MainContainer>
         <Title>Заброшенные деревни Чернобыля</Title>
       </MainContainer>
-      <PowerButton />
       <Village faqList={faqList} />;
     </BackVilage>
   );
 };
-// font-family: 'Karla', sans-serif;
 export default VillagePage;

@@ -1,15 +1,14 @@
 import React, { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, mediaQueries } from './Themes';
+import { lightTheme, mediaQueries } from '../UI/Themes';
 import styled from 'styled-components';
-import Loading from '../subComponents/Loading';
-import ParticlesComponent from '../subComponents/ParticlesComponent';
-import PowerButton from '../subComponents/PowerButton';
-import BigTitle from '../subComponents/BigTitle';
+import Loading from '../UI/Loading';
+import ParticlesComponent from '../UI/ParticlesComponent';
+import BigTitle from '../UI/BigTitle';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styles from '../subComponents/Museum/style.module.css'
+import styles from './style.module.css'
 
 const StyledCarousel = styled.div`
   width: 80%;
@@ -53,45 +52,44 @@ const SliderWithPhotos = ({ photos }) => {
 
 const Museum = () => {
   const photosGomel = [
-    require('../subComponents/Museum/images/Gomel/1.jpg'),
-    require('../subComponents/Museum/images/Gomel/2.jpg'),
-    require('../subComponents/Museum/images/Gomel/3.jpg'),
-    require('../subComponents/Museum/images/Gomel/4.jpg'),
-    require('../subComponents/Museum/images/Gomel/5.jpg'),
-    require('../subComponents/Museum/images/Gomel/6.jpg'),
-    require('../subComponents/Museum/images/Gomel/7.jpg'),
-    require('../subComponents/Museum/images/Gomel/8.jpg'),
-    require('../subComponents/Museum/images/Gomel/9.jpg'),
-    require('../subComponents/Museum/images/Gomel/10.jpg'),
-    require('../subComponents/Museum/images/Gomel/11.jpg'),
-    require('../subComponents/Museum/images/Gomel/12.jpg'),
-    require('../subComponents/Museum/images/Gomel/13.jpg'),
-    require('../subComponents/Museum/images/Gomel/14.jpg'),
-    require('../subComponents/Museum/images/Gomel/15.jpg'),
-    require('../subComponents/Museum/images/Gomel/16.jpg'),
-    require('../subComponents/Museum/images/Gomel/17.jpg'),
-    require('../subComponents/Museum/images/Gomel/18.jpg'),
-    require('../subComponents/Museum/images/Gomel/19.jpg'),
-    require('../subComponents/Museum/images/Gomel/20.jpg'),
-    require('../subComponents/Museum/images/Gomel/21.jpg'),
+    require('./images/Gomel/1.jpg'),
+    require('./images/Gomel/2.jpg'),
+    require('./images/Gomel/3.jpg'),
+    require('./images/Gomel/4.jpg'),
+    require('./images/Gomel/5.jpg'),
+    require('./images/Gomel/6.jpg'),
+    require('./images/Gomel/7.jpg'),
+    require('./images/Gomel/8.jpg'),
+    require('./images/Gomel/9.jpg'),
+    require('./images/Gomel/10.jpg'),
+    require('./images/Gomel/11.jpg'),
+    require('./images/Gomel/12.jpg'),
+    require('./images/Gomel/13.jpg'),
+    require('./images/Gomel/14.jpg'),
+    require('./images/Gomel/15.jpg'),
+    require('./images/Gomel/16.jpg'),
+    require('./images/Gomel/17.jpg'),
+    require('./images/Gomel/18.jpg'),
+    require('./images/Gomel/19.jpg'),
+    require('./images/Gomel/20.jpg'),
+    require('./images/Gomel/21.jpg'),
   ];
 
   const photosHoiniki = [
-    require('../subComponents/Museum/images/Hoiniki/1.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/2.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/4.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/5.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/6.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/7.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/8.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/9.jpg'),
-    require('../subComponents/Museum/images/Hoiniki/10.jpg'),
+    require('./images/Hoiniki/1.jpg'),
+    require('./images/Hoiniki/2.jpg'),
+    require('./images/Hoiniki/4.jpg'),
+    require('./images/Hoiniki/5.jpg'),
+    require('./images/Hoiniki/6.jpg'),
+    require('./images/Hoiniki/7.jpg'),
+    require('./images/Hoiniki/8.jpg'),
+    require('./images/Hoiniki/9.jpg'),
+    require('./images/Hoiniki/10.jpg'),
   ];
 
   return (
     <ThemeProvider theme={lightTheme}>
       <ParticlesComponent theme="light" />
-      <PowerButton />
       <Suspense fallback={<Loading />}>
         <div className={styles.container}>
           <div className={styles.box}>

@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 import styled, { ThemeProvider } from 'styled-components';
 import { lazy, Suspense } from 'react';
-import { lightTheme, mediaQueries } from './Themes';
+import { lightTheme, mediaQueries } from '../UI/Themes';
 import { NavLink } from 'react-router-dom';
 
-import { Android, Site, QrCode } from './AllSvgs';
-import Loading from '../subComponents/Loading';
+import { Android, Site, QrCode } from '../UI/AllSvgs';
+import Loading from '../UI/Loading';
 
-const SocialIcons = lazy(() => import('../subComponents/SocialIcons'));
-const PowerButton = lazy(() => import('../subComponents/PowerButton'));
-const LogoComponent = lazy(() => import('../subComponents/LogoComponent'));
-const ParticlesComponent = lazy(() => import('../subComponents/ParticlesComponent'));
-const BigTitle = lazy(() => import('../subComponents/BigTitle'));
+const SocialIcons = lazy(() => import('../UI/SocialIcons'));
+const PowerButton = lazy(() => import('../UI/PowerButton'));
+const LogoComponent = lazy(() => import('../UI/LogoComponent'));
+const ParticlesComponent = lazy(() => import('../UI/ParticlesComponent'));
+const BigTitle = lazy(() => import('../UI/BigTitle'));
 
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};

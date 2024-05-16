@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import PowerButton from '../subComponents/PowerButton';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import styles from '../subComponents/Likvidators/style.module.css';
-import '../subComponents/Likvidators/swiperStyles.css';
-import images from '../subComponents/Likvidators/images';
+import styles from './style.module.css';
+import './swiperStyles.css';
+import images from './images';
 
 
 function BlogPage() {
@@ -21,7 +20,6 @@ function BlogPage() {
 
   return (
     <div className={styles.main}>
-      <PowerButton />
       <Swiper
         navigation={true}
         pagination={{ type: 'fraction', }}

@@ -4,16 +4,15 @@ import React, { lazy, Suspense, useState } from 'react';
 import { motion } from 'framer-motion';
 
 //Components
-import { Radiation } from './AllSvgs';
+import { Radiation } from '../UI/AllSvgs';
 import Intro from './Intro';
-import Loading from '../subComponents/Loading';
-import { mediaQueries } from './Themes';
-import img from '../assets/Images/bgCher.jpg';
+import Loading from '../UI/Loading';
+import { mediaQueries } from '../UI/Themes';
+import img from '../../assets/Images/bgCher.jpg';
 
-const PowerButton = lazy(() => import('../subComponents/PowerButton'));
-const SocialIcons = lazy(() => import('./../subComponents/SocialIcons'));
+const SocialIcons = lazy(() => import('../UI/SocialIcons'));
+const LogoComponent = lazy(() => import('../UI/LogoComponent'));
 
-const LogoComponent = lazy(() => import('./../subComponents/LogoComponent'));
 const MainContainer = styled(motion.div)`
   background-image: url(${img});
   width: 100vw;
@@ -215,7 +214,6 @@ const Main = () => {
         <DarkDiv click={click} />
         <Container>
           <LogoComponent theme={click ? 'dark' : 'light'} />
-          <PowerButton />
           {mq ? (
             <SocialIcons theme="light" />
           ) : (

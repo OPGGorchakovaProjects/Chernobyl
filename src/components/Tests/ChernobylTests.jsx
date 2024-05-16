@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import questions from '../subComponents/Tests/Tests.json';
-import styles from '../subComponents/Tests/style.module.css';
-import PowerButton from '../subComponents/PowerButton';
+import questions from './Tests.json';
+import styles from './style.module.css';
 
 function Tests() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -64,7 +63,6 @@ function Tests() {
 
     return (
         <>
-            <PowerButton />
             {!quizFinished ? (
                 <div className={styles.main}>
                     <div className={styles.container}>
@@ -107,13 +105,13 @@ function Tests() {
                         <h2>Результаты</h2>
                         <p>Результат: {correctAnswers}/{questionsData.length}</p>
                         {correctAnswers >= 10 && (
-                            <img src={require('../subComponents/Tests/like.png')} alt="Вы молодец" />
+                            <img src={require('./results/like.png')} alt="Вы молодец" />
                         )}
                         {correctAnswers < 10 && correctAnswers >= 5 && (
-                            <img src={require('../subComponents/Tests/medium.png')} alt='Среднячок' />
+                            <img src={require('./results/medium.png')} alt='Среднячок' />
                         )}
                         {correctAnswers < 5 && (
-                            <img src={require('../subComponents/Tests/dislike.png')} alt='Плохо' />
+                            <img src={require('./results/dislike.png')} alt='Плохо' />
                         )}
                         <p>Вы знаете о чернобыле на {Math.floor(percentage)}%</p>
                         <button onClick={restart}>Начать сначала</button>

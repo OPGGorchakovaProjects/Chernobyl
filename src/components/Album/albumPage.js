@@ -10,7 +10,6 @@ import styles from './style.module.css';
 import './swiperStyle.css'
 
 import { Pagination, Navigation } from 'swiper/modules';
-import PowerButton from '../subComponents/PowerButton';
 
 export default function AlbumPage() {
   const [slides, setSlides] = useState([]);
@@ -21,7 +20,6 @@ export default function AlbumPage() {
 
   return (
     <div className={styles.main}>
-      <PowerButton />
       <div className='swiper'>
         <Swiper
           slidesPerView={1}

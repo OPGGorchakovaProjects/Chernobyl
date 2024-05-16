@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
-import { Vk, Instagram, Site, Telegram } from '../components/AllSvgs';
-import { DarkTheme } from '../components/Themes';
+import { Vk, Instagram, Site, Telegram } from './AllSvgs';
+import { DarkTheme } from './Themes';
 
 const Icons = styled.div`
   display: flex;

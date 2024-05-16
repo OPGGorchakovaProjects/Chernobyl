@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { mediaQueries } from './Themes';
+import { mediaQueries } from '../UI/Themes';
 import { NavLink } from 'react-router-dom';
-import gasMask from '../assets/Images/gasMask.png';
+import gasMask from '../../assets/Images/gasMask.png';
 
 const Box = styled(motion.div)`
   width: 55vw;

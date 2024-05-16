@@ -1,12 +1,7 @@
-import styles from '../subComponents/historyStyle.module.css';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+import styles from './historyStyle.module.css';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import styled, { keyframes } from 'styled-components';
-import { lazy } from 'react';
-const PowerButton = lazy(() => import('../subComponents/PowerButton'));
 
 const WorkIcon = () => <></>;
 
@@ -25,7 +20,6 @@ const Title = styled.div`
 export default function BlogPage() {
   return (
     <div className={styles.App}>
-      <PowerButton />
       <h1 className={styles.title}>История Чернобыльской АЭС</h1>
       <div className="empty"></div>
       <VerticalTimeline>

@@ -3,19 +3,21 @@ import { AnimatePresence } from 'framer-motion';
 import { lazy, Suspense } from 'react';
 import './globalStyles.css';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './components/Themes';
-import Loading from './subComponents/Loading';
+import { lightTheme } from './components/UI/Themes';
+import Loading from './components/UI/Loading';
 
-const Main = lazy(() => import('./components/Main'));
-const HronologPage = lazy(() => import('./components/HronologPage'));
-const AppsPage = lazy(() => import('./components/AppsPage'));
-const BlogPage = lazy(() => import('./components/BlogPage'));
-const VillagePage = lazy(() => import('./components/VillagePage'));
-const HistoryPage = lazy(() => import('./components/HistoryPage'));
-const Documents = lazy(() => import('./components/Documents'));
-const AlbumPage = lazy(() => import('./albumComponents/albumPage'));
-const Museum = lazy(() => import('./components/Museum'));
-const ChernobylTests = lazy(() => import('./components/ChernobylTests'));
+const PowerButton = lazy(() => import('./components/UI/PowerButton'));
+
+const Main = lazy(() => import('./components/Main/Main'));
+const HronologPage = lazy(() => import('./components/Other/HronologPage'));
+const AppsPage = lazy(() => import('./components/Other/AppsPage'));
+const BlogPage = lazy(() => import('./components/Likvidators/BlogPage'));
+const VillagePage = lazy(() => import('./components/Village/VillagePage'));
+const HistoryPage = lazy(() => import('./components/History/HistoryPage'));
+const Documents = lazy(() => import('./components/Documents/Documents'));
+const AlbumPage = lazy(() => import('./components/Album/albumPage'));
+const Museum = lazy(() => import('./components/Museum/Museum'));
+const ChernobylTests = lazy(() => import('./components/Tests/ChernobylTests'));
 
 function App() {
   const location = useLocation();
@@ -24,6 +26,7 @@ function App() {
     <>
       <ThemeProvider theme={lightTheme}>
         <Suspense fallback={<Loading />}>
+          <PowerButton />
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Main />} />
