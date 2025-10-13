@@ -136,7 +136,7 @@ const Description = styled.div`
 
 const apkClick = () => {
   window.open(
-    'https://drive.google.com/file/d/1-MxwEUOQDxBa1KJbGJX6DoDHNcDfqw0w/view?usp=drive_link',
+    'https://secrets-of-chernobyl.vercel.app/',
     '_blank'
   );
 };
@@ -169,20 +169,19 @@ const AppsPage = () => {
 
           <Main onClick={apkClick}>
             <Title>
-              <Android width={40} height={40} /> APK игра "Lost-Zone"
+              <Site width={60} height={60} /> WEB игра "Secrets of Chernobyl"
             </Title>
             <Description>
-              Мобильная игра для операционной ситемы Андройд
+            	WEB игра для компьтеров и телефонов 
             </Description>
+            
             <Description>
-              <strong>Требования:</strong> <br />
-              <ul>
-                <li>Устройство с операционной системой Андройд</li>
-              </ul>
-            </Description>
-            <Description>
-              <QrCode />
-            </Description>
+            
+  				<a href="http://qrcoder.ru" target="_blank">
+	  				<img src="http://qrcoder.ru/code/?https%3A%2F%2Fsecrets-of-chernobyl.vercel.app%2F&4&0" width="148" height="148" border="0" title="QR код"/>
+	  			</a>	 
+
+	  		</Description>
           </Main>
 
           <Main>
