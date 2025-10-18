@@ -136,6 +136,13 @@ const Description = styled.div`
 
 const apkClick = () => {
   window.open(
+    'https://drive.google.com/file/d/1-MxwEUOQDxBa1KJbGJX6DoDHNcDfqw0w/view?usp=drive_link',
+    '_blank'
+  );
+};
+
+const GameClick = () => {
+  window.open(
     'https://secrets-of-chernobyl.vercel.app/',
     '_blank'
   );
@@ -167,7 +174,7 @@ const AppsPage = () => {
           <SocialIcons theme="light" />
           <ParticlesComponent theme="light" />
 
-          <Main onClick={apkClick}>
+          <Main onClick={GameClick}>
             <Title>
               <Site width={60} height={60} /> WEB игра "Secrets of Chernobyl"
             </Title>
@@ -177,10 +184,28 @@ const AppsPage = () => {
             
             <Description>
             
-  			  	<img src="/GameCode.gif" width="148" height="148" border="0" title="QR код"/>
+  			  	<img src="/GameCode.gif" width="50%" border="0" title="QR код"/>
 	  		
-
 	  		</Description>
+          </Main>
+
+
+          <Main onClick={apkClick}>
+            <Title>
+              <Android width={40} height={40} /> APK игра "Lost-Zone"
+            </Title>
+            <Description>
+              Мобильная игра для операционной ситемы Андройд
+            </Description>
+            <Description>
+              <strong>Требования:</strong> <br />
+              <ul>
+                <li>Устройство с операционной системой Андройд</li>
+              </ul>
+            </Description>
+            <Description>
+              <QrCode />
+            </Description>
           </Main>
 
           <Main>
