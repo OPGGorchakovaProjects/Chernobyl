@@ -11,7 +11,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import styles from './style.module.css'
 
 const StyledCarousel = styled.div`
-  width: 80%;
+  width: 95%;
   max-height: 80%;
   margin: 0 auto; 
   align-items: center;

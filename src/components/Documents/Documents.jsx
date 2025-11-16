@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import { Button } from 'react-bootstrap';
 import imagesData from './images.js';
 import styles from './style.module.css';
+import "../../App.css";
 
 const Documents = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -75,14 +76,17 @@ const Documents = () => {
                 </div>
                 {isModalOpen && selectedImage && selectedImage.additionalImages && (
                     <Modal
+						id="MyModal"
                         isOpen={isModalOpen}
                         onRequestClose={handleCloseModal}
                         style={{
                             overlay: {
-                                display: 'flex',
-                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                margin: 'auto',
-                                left: 0,
+								left:0,
+								right:0,
+								inset: "0 !important",
+								margin: "0 auto",
+								display: 'flex',
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)', 
                             },
                             content: {
                                 width: isMobile ? '90%' : isTablet ? '60%' : '40%',

@@ -145,6 +145,7 @@ body {
   height: 5vw;
   width: fit-content;
   align-items: stretch;
+  padding: 5px;
 }
 
 @media (hover:hover) {

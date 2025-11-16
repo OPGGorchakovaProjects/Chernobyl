@@ -60,7 +60,7 @@ body {
 }
 
 .qrcode {
-    width: 10rem;
+    width: 8rem;
     height: auto;
 }
 
@@ -90,6 +90,6 @@ body {
     align-items: center;
 }
 
-.museumTitle p {
+.museumTitle h2 {
     font-size: 1.2rem;
 }

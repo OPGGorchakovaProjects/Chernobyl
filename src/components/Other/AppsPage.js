@@ -19,8 +19,10 @@ const Box = styled(motion.div)`
   height: auto;
   position: relative;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center; 
+  align-items: flex-start;
+
+  gap:20px;
 
   ${mediaQueries(50)`
     flex-direction:column;  
@@ -40,26 +42,24 @@ const Main = styled(motion.div)`
   color: ${(props) => props.theme.text};
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
+  
   width: 30vw;
   height: 60vh;
   z-index: 3;
   line-height: 1.5;
   cursor: pointer;
-
-  ${mediaQueries(60)`
-    height: 55vh;
-  `};
-
-  ${mediaQueries(50)`
-    width: 50vw;
-    height: max-content;
-  `};
+  height: auto;
 
   font-family: 'Ubuntu Mono', monospace;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+	
+  ${mediaQueries(60)`
+	width: 85%;
+	margin: 0 auto;
+  `}
+ 
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
@@ -185,10 +185,13 @@ const AppsPage = () => {
             
             <Description>
             
-  			  	<img src="/GameCode.gif" width="50%" border="0" title="QR код"/>
+  			  	<img src="/GameCode.gif" width="45%" border="0" title="QR код"/>
 	  		
 	  		</Description>
-          </Main>
+          
+	  		<video src="/Gameplay/SeretsOfChernobyl.mp4" width="100%" controls style={{paddingBottom:30}}/>
+			
+	  	</Main>
 
 
           <Main onClick={apkClick}>
@@ -205,8 +208,11 @@ const AppsPage = () => {
               </ul>
             </Description>
             <Description>
-              <QrCode width="30%"/>
+              <QrCode width="45%"/>
             </Description>
+
+	  		<video src="/Gameplay/Escape.mp4" width="100%" height="20%" controls style={{paddingBottom:30}}/>
+	  		
           </Main>
 
           <Main>
@@ -222,23 +228,19 @@ const AppsPage = () => {
                   <p>Благодаря данному тесту вы можете проверить уровень знаний о чернобыле</p> 
 	  			</Description>
 				
-	  			<SiteTestQR width={"30%"} style={{marginTop:10}}/>
+	  			<SiteTestQR width={"45%"} style={{marginTop:10}}/>
 
 
               </>
             </StyledNavLink>
-          </Main>
+	  		<video src="/Gameplay/Test.mp4" width="100%" height="20%" controls style={{paddingBottom:30}}/>
+      	    
+	  	</Main>
 
           <BigTitle text="ПРИЛОЖЕНИЯ" top="80%" right="30%" />
         </Box>
 	  	
 
-
-	  	<Box style={{marginTop: 30}}>
-	  		<video src="/Gameplay/SeretsOfChernobyl.mp4" width="30%" controls style={{paddingBottom:30}}/>
-	  		<video src="/Gameplay/Escape.mp4" width="30%" height="20%" controls style={{paddingBottom:30}}/>
-	  		<video src="/Gameplay/Test.mp4" width="30%" controls style={{paddingBottom:30}}/>
-	    </Box>
       </Suspense>
     </ThemeProvider>
   );

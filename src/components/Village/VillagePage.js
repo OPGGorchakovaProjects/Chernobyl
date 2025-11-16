@@ -14,6 +14,8 @@ const MainContainer = styled.div`
   overflow: hidden;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 const BackVilage = styled.div`
   background-color: #15181d;
@@ -22,7 +24,6 @@ const Title = styled.h1`
   font-size: 5em;
   text-align: center;
   
-  width:500px;
   position: absolute;
   bottom: 10px;
   left:50px;
@@ -34,7 +35,7 @@ const Title = styled.h1`
   
   @media (max-width: 768px) {
     font-size: 2em;
-    text-align: center;
+    text-align: left;
     margin-right: 0px;
     margin-top: 0px;
   }

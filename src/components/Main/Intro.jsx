@@ -89,9 +89,9 @@ const SubBox = styled.div`
   display: flex;
   justify-content: center; 
   align-items: center; 
-  padding: 1rem;
+  padding: 0.5rem;
 
-  ${mediaQueries(40)`
+  ${mediaQueries(55)`
   font-size: calc(1rem + 1.5vw);
   margin: 0;
   width: 100%;
@@ -144,8 +144,8 @@ const Intro = () => {
       animate={{ height: height }}
       transition={{ type: 'spring', duration: 2, delay: 1 }}
     >
-      <SubBox>
-        <Text>
+      <SubBox style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+        <Text style={{margin:"0 auto", paddingBottom:0}}>
           <h1 style={{ margin: 0 }}>1986</h1>
           <h3>Виртуальный музей</h3>
           <h6>Чернобыльской трагедии</h6>
@@ -157,7 +157,7 @@ const Intro = () => {
           </Link>
         </Text>
       </SubBox>
-      <SubBox>
+      <SubBox style={{margin:"0 auto", top:0}}>
         <NavLink to="/photoalbum">
           <motion.div
             initial={{ opacity: 0 }}

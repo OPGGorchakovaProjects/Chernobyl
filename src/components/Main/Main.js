@@ -35,12 +35,12 @@ const MainContainer = styled(motion.div)`
   }
 
   h2 {
-    ${mediaQueries(40)`
+    ${mediaQueries(60)`
       font-size:1.2em;
 
   `};
 
-    ${mediaQueries(30)`
+    ${mediaQueries(40)`
       font-size:1em;
 
   `};
