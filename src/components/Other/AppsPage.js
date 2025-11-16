@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 import { lightTheme, mediaQueries } from '../UI/Themes';
 import { NavLink } from 'react-router-dom';
 
-import { Android, Site, QrCode } from '../UI/AllSvgs';
+import { Android, Site, QrCode, SiteTestQR } from '../UI/AllSvgs';
 import Loading from '../UI/Loading';
 
 const SocialIcons = lazy(() => import('../UI/SocialIcons'));
@@ -16,7 +16,7 @@ const BigTitle = lazy(() => import('../UI/BigTitle'));
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
-  height: 100vh;
+  height: auto;
   position: relative;
   display: flex;
   justify-content: space-evenly;
@@ -168,7 +168,8 @@ const AppsPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1 } }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
-        >
+          style={{marginTop:"10%"}}
+	  	>
           <LogoComponent theme="light" />
           <PowerButton />
           <SocialIcons theme="light" />
@@ -204,7 +205,7 @@ const AppsPage = () => {
               </ul>
             </Description>
             <Description>
-              <QrCode />
+              <QrCode width="30%"/>
             </Description>
           </Main>
 
@@ -218,14 +219,26 @@ const AppsPage = () => {
 
                 <Description>
                   <strong>Описание:</strong> <br />
-                  <p>Благодаря данному тесту вы можете проверить уровень знаний о чернобыле</p>
-                </Description>
+                  <p>Благодаря данному тесту вы можете проверить уровень знаний о чернобыле</p> 
+	  			</Description>
+				
+	  			<SiteTestQR width={"30%"} style={{marginTop:10}}/>
+
+
               </>
             </StyledNavLink>
           </Main>
 
           <BigTitle text="ПРИЛОЖЕНИЯ" top="80%" right="30%" />
         </Box>
+	  	
+
+
+	  	<Box style={{marginTop: 30}}>
+	  		<video src="/Gameplay/SeretsOfChernobyl.mp4" width="30%" controls style={{paddingBottom:30}}/>
+	  		<video src="/Gameplay/Escape.mp4" width="30%" height="20%" controls style={{paddingBottom:30}}/>
+	  		<video src="/Gameplay/Test.mp4" width="30%" controls style={{paddingBottom:30}}/>
+	    </Box>
       </Suspense>
     </ThemeProvider>
   );

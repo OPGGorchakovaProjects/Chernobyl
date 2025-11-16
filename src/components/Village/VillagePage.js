@@ -2,7 +2,7 @@ import React from 'react';
 import { Village } from './Village';
 import { faqList } from './faqList';
 import styled from 'styled-components';
-import bgVillage from '../../assets/Images/bgVillage.jpg';
+import bgVillage from '../../assets/Images/village.png';
 import { mediaQueries } from '../UI/Themes';
 
 const MainContainer = styled.div`
@@ -21,11 +21,17 @@ const BackVilage = styled.div`
 const Title = styled.h1`
   font-size: 5em;
   text-align: center;
-  margin-right: 1000px;
-  margin-top: 500px;
+  
+  width:500px;
+  position: absolute;
+  bottom: 10px;
+  left:50px;
+
   color: #000;
-  text-shadow: 2px 2px 2px #fa6d1b;
-  font-family: Pacifico, cursive;
+  color: rgb(228, 228, 228);
+  //text-shadow: 2px 2px 2px #fa6d1b;
+  text-align: left;
+  
   @media (max-width: 768px) {
     font-size: 2em;
     text-align: center;

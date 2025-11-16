@@ -14,7 +14,16 @@ function HronologPage() {
         mozallowfullscreen
         allowfullscreen
         frameborder="0"
-      ></iframe>
+      	style={{
+			position: "absolute",
+			left: 0,
+			right: 0,
+			margin: "0 auto",
+			
+			width: "100%",
+			height: "100vh",
+		}}
+	  ></iframe>
     </>
   );
 }
