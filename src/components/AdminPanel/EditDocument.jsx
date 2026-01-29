@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -12,7 +13,7 @@ import {AdminGET, AdminPOST} from "../API/api";
 import styles from "./add-doc-style.module.css";
 
 
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate  } from 'react-router-dom';
 
 const Page = (props) => {
 	let textAreaRef = useRef(null)	
@@ -61,6 +62,7 @@ const Page = (props) => {
 
 const EditDocument = () => {
 	let {id} = useParams();
+	const navigate = useNavigate();
 	
 
 	const nameRef = useRef();
@@ -142,7 +144,7 @@ const EditDocument = () => {
 
 		console.log("RESULT: ", res);
 		
-		window.location.pathname='/adminpanel';
+		navigate('/adminpanel');
 	}
 
 
@@ -208,8 +210,9 @@ const EditDocument = () => {
 				</div>
 
                 <button id='submit' className={styles.submit_button} onClick={()=>{saveInfo()}}>Сохранить</button>    		
+				
 				<button id='discard' className={styles.submit_button} onClick={()=>{
-					window.location.pathname="/adminpanel";
+					navigate("/adminpanel");
 				}} style={{
 					background: "transparent",
 					color: "white",

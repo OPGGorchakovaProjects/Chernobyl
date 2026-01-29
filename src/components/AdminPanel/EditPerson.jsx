@@ -10,11 +10,12 @@ import {AdminGET, AdminPOST} from "../API/api";
 
 import styles from "./addLikvidator-style.module.css";
 
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 
 const EditPerson = () => {
 	let {id} = useParams();
+	const navigate = useNavigate();
 	
 
 	const nameRef = useRef();
@@ -74,7 +75,7 @@ const EditPerson = () => {
 
 		console.log("RESULT: ", res);
 		
-		window.location.pathname='/adminpanel';
+		navigate('/adminpanel');
 	}
 
 	return (
@@ -87,7 +88,7 @@ const EditPerson = () => {
 			   
 				<div className={styles.image_block}>
 					<img id='preview' ref={imageRef} src="" 
-						style={{width:"100%", height:"100%", display:"flex", borderRadius:5}} 
+						style={{width:"100%", height:"auto", maxHeight:"100%", display:"flex", borderRadius:5}} 
 						onClick={()=>{
 							document.querySelector("#file").click();
 						}} />
@@ -134,7 +135,7 @@ const EditPerson = () => {
 					
 					<div className={styles.input}>
 						<p>История</p>
-						<textarea ref={storyRef} id="story" placeholder="К прим. 1 сентября 1920г. - 30 сентября 1500г. " ></textarea>
+						<textarea ref={storyRef} id="story" ></textarea>
 					</div>
 					
 					<div className={styles.input}>
@@ -173,7 +174,7 @@ const EditPerson = () => {
 
 					<button id='submit' className={styles.submit_button} onClick={saveInfo} >Сохранить</button>
 					<button id='discard' className={styles.submit_button} onClick={()=>{
-						window.location.pathname="/adminpanel";
+						navigate("/adminpanel");
 					}} style={{
 						background: "transparent",
 						color: "white",

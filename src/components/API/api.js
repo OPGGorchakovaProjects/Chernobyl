@@ -9,6 +9,8 @@ export default async function POST(path, body) {
 		body: body
 	});
 
+	if (resp.status != 200) { alert('Ошибка сервера: ' + resp.status) }
+
 	let res = await resp.json();
 	
 	if (res.error) {
@@ -24,6 +26,9 @@ export async function GET(path) {
 	let resp = await fetch(api_url + path, {
 		method: "GET",
 	});
+
+	if (resp.status != 200) { alert('Ошибка сервера: ' + resp.status) }
+
 
 	let res = await resp.json();
 	
@@ -45,6 +50,8 @@ export async function AdminGET(path, body) {
 	});
 
 	if (resp.status == 401) { return window.location.pathname = "/adminpanel/login"; }
+	if (resp.status != 200) { alert('Ошибка сервера: ' + resp.status) }
+
 
 	let res = await resp.json();
 	
@@ -70,6 +77,8 @@ export async function AdminPOST(path, body) {
 
 	
 	if (resp.status == 401) { return window.location.pathname = "/adminpanel/login"; }
+	if (resp.status != 200) { alert('Ошибка сервера: ' + resp.status) }
+
 
 
 	let res = await resp.json();
@@ -88,6 +97,9 @@ export async function docsSearch(query) {
 	let resp = await fetch(api_url + "/search?query=" + query, {
 		method:"GET"
 	})
+
+	if (resp.status != 200) { alert('Ошибка сервера: ' + resp.status) }
+
 
 	let res = await resp.json();
 	

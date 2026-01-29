@@ -111,7 +111,7 @@ async function sendForm(filesArray){
 	pics_data = pics_data['data'];
 	
 	picsForm.append("name", name);
-	picsForm.append("email", email);
+	picsForm.append("email", email || '');
 	picsForm.append("pics_text", JSON.stringify(pics_data));
 
 	let res = await POST("/add-docs", picsForm);

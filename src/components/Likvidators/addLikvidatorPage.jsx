@@ -51,7 +51,7 @@ function addLikvidatorPage() {
            
             <div className={styles.image_block}>
                 <img id='preview' src="" 
-                    style={{width:"100%", height:"100%", display:"none", borderRadius:5}} 
+                    style={{width:"100%", height:"auto%", maxHeight:"100%", display:"none", borderRadius:5}} 
                     onClick={()=>{
                         document.querySelector("#file").click();
                     }} />
@@ -107,7 +107,7 @@ function addLikvidatorPage() {
                 
                 <div className={styles.input}>
                     <p>История</p>
-                    <textarea id="story" placeholder="К прим. 1 сентября 1920г. - 30 сентября 1500г. " ></textarea>
+                    <textarea id="story" placeholder="Напишите небольшую биографю личности" ></textarea>
                 </div>
                 
                 <div className={styles.input}>
