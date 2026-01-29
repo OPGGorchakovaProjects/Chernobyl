@@ -1,0 +1,211 @@
+body {
+    background-color: #0B0B0B;
+}
+
+.form {
+    background: #121212;
+    border: solid 1px #525252;
+    
+    border-radius: 10px;
+
+    max-width: 1000px;
+    width: 95%;
+
+    min-height:300px;
+    height: fit-content;
+
+    position:absolute;
+    left:0;
+    right:0;
+    top:100px;
+
+    margin:0 auto;
+
+    display: flex;
+    flex-direction:column;
+    
+    align-items:center;
+   
+    flex-wrap: wrap;
+
+    color: #FFFFFF;
+
+    box-sizing: border-box;
+    padding-bottom:25px;
+}
+
+.container {
+    width: 90%;
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    margin-top:30px;
+}
+
+
+
+
+
+.info_block .input {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+    padding-bottom: 25px;
+}
+
+.info_block .input p {
+    font-size: 1.5rem;
+    color: #C3C3C3;
+}
+
+.info_block .input input {
+    height: 43px !important;
+    background: transparent;
+
+    border: 1px solid #525252;
+
+    margin-top:7px;
+    height:40px;
+
+    border-radius: 5px;
+    color: #C3C3C3;
+
+    box-sizing: border-box;
+    padding-left:5px;
+
+}
+
+.info_block .input textarea {
+    height: 150px !important;
+    background: transparent;
+
+    border: 1px solid #525252;
+
+    margin-top:7px;
+    height:40px;
+
+    border-radius: 5px;
+    color: #C3C3C3;
+
+    box-sizing: border-box;
+    padding-left:5px;
+    padding-top:10px;
+    padding-right:5px;
+
+    resize: none;
+
+
+}
+
+.submit_button {
+    width: 100%;
+    height: 43px;
+
+    background: #dcdcdc;
+    border-radius: 5px;
+
+    color: black;
+    font-weight: bold;
+}
+
+
+.filesInputContainer {
+	width: 100%;
+	aspect-ratio: 1/0.35;
+
+	
+	display:flex;
+	flex-direction:column;
+	justifyContent: center;
+	align-items:center;
+
+	padding-bottom: 20px;
+}
+
+.filesInputContainer p {
+	font-size: 1.5rem;
+    color: #C3C3C3;
+
+}
+
+.addDocumentButton {
+	
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+
+	background: transparent;
+	border:1px solid #525252;
+
+	border-radius: 5px;
+
+	color: #C3C3C3;
+
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.filesBlock {
+	margin-top: 10px;
+
+	width: 100%;
+	height: 100%;
+
+	display:flex;
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	border:1px solid #525252;
+	border-radius:5px;
+
+	box-sizing: border-box;
+
+	padding: 15px;
+	gap: 15px;
+
+	overflow: auto;
+
+}
+
+.docBox {
+	
+	width: 17%;
+	height: 75%;
+
+	border: 1px dashed #525252;
+	border-radius: 5px;
+
+	display:flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+
+	padding: 10px;
+	padding-top:5px;	
+
+}
+
+.DOC {
+	width: auto;
+	height:auto;
+
+	max-height:95%;
+}
+
+
+.cancelButton {
+	width:2rem;
+	height: auto;
+
+	position: inherit;
+	margin-left: -21px;
+	margin-top: -23px;
+
+	cursor:pointer;
+}
+

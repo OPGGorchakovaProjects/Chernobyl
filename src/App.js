@@ -19,6 +19,15 @@ const AlbumPage = lazy(() => import('./components/Album/albumPage'));
 const Museum = lazy(() => import('./components/Museum/Museum'));
 const ChernobylTests = lazy(() => import('./components/Tests/ChernobylTests'));
 
+const AddLikvidatorPage = lazy(() => import("./components/Likvidators/addLikvidatorPage"))
+const AddDocumentsPage = lazy(() => import("./components/Documents/AddDocuments"));
+
+const AdminPanelLogin = lazy(() => import("./components/AdminPanel/Login"));
+const AdminPanel = lazy(()=>import("./components/AdminPanel/AdminPanel"));
+const EditPerson = lazy(()=>import("./components/AdminPanel/EditPerson"));
+const EditDocument = lazy(()=>import("./components/AdminPanel/EditDocument"));
+
+
 function App() {
   const location = useLocation();
 
@@ -48,6 +57,15 @@ function App() {
               <Route path="/museum" element={<Museum />} />
 
               <Route path="/ChernobylTests" element={<ChernobylTests />} />
+            
+              <Route path="/AddLikvidator" element={<AddLikvidatorPage />} />
+              <Route path="/AddDocuments" element={<AddDocumentsPage />} />
+
+              <Route path="/adminpanel/login" element={<AdminPanelLogin />} />
+              <Route path="/adminpanel" element={<AdminPanel />} />
+
+			  <Route path="/adminpanel/edit/person/:id" element={<EditPerson />} />		
+			  <Route path="/adminpanel/edit/document/:id" element={<EditDocument />} />		
 
               <Route path="*" element={<Main />} />
             </Routes>
